@@ -1,0 +1,8 @@
+@mixin typography($size,$width) {
+  font-size: $size;
+  font-weight: $width;
+}
+
+@mixin container($width) {
+  max-width: $width;
+}

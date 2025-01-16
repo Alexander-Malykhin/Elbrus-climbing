@@ -1,0 +1,165 @@
+@import "./settings/colors";
+@import "./settings/mixins";
+@import "./settings/fonts";
+
+.header {
+  background-image: url("../images/background_header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  max-width: 100%;
+  height: auto;
+  padding: 30px 0 21px 0;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    &-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    &-middle {
+      margin-top: 77px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+  }
+
+  &__logo {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    &-item {
+      @include typography($fz_16,$fw_500);
+      color: $white;
+    }
+
+    &-button {
+      @include typography($fz_16,$fw_500);
+      color: $main_green;
+    }
+  }
+
+  &__panel {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    &-icon {
+      width: 22px;
+      height: 22px;
+    }
+
+    &-language {
+      @include typography($fz_12,$fw_400);
+      width: 22px;
+      height: 22px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-transform: uppercase;
+      border-radius: 4px;
+      border: 1px solid $white;
+      color: $white;
+    }
+
+    &-user {
+      width: 24px;
+      height: 24px;
+      border-radius: 100%;
+      border: 1px solid $white;
+      padding: 4px 4px 5px 4px;
+    }
+  }
+
+  &__select {
+    height: 22px;
+    width: 68px;
+    padding: 3px 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 4px;
+    border: 1px solid $white;
+
+    &-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    &-arrow {
+     cursor: pointer;
+    }
+
+    &-text {
+      @include typography($fz_12,$fw_400);
+      text-transform: uppercase;
+      color: $white;
+    }
+  }
+
+  &__information {
+    max-width: 667px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    &-list {
+      display: flex;
+      gap: 24px;
+    }
+
+    &-item {
+      @include typography($fz_12,$fw_400);
+      display: inline-block;
+      padding: 2.5px 8.5px;
+      color: $white;
+      border-radius: 4px;
+      border: 1px solid $white;
+    }
+
+    &-title {
+      @include typography($fz_45,$fw_700);
+      text-transform: uppercase;
+      color: $white;
+      line-height: 120%;
+    }
+
+    &-button {
+      margin-top: 5px;
+      padding: 27px 27px 26px 31px;
+      border-radius: 100%;
+      border: 1px solid $white;
+      background: rgba($white,0.2);
+    }
+  }
+}
+
