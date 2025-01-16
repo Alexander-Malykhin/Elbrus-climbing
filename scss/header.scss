@@ -161,5 +161,31 @@
       background: rgba($white,0.2);
     }
   }
+
+  &__links {
+    max-width: 54px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 46px;
+
+    &-text {
+      @include typography($fz_16,$fw_500);
+      color: $white;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    &-item {
+      cursor: pointer;
+      width: 31px;
+      height: 31px;
+    }
+  }
 }
 
