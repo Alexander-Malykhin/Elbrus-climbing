@@ -247,10 +247,10 @@
 
   &__button {
     @include typography($fz_16, $fw_500);
-    @include button(10.5px, 29.5px, $main_green, $white, 4px);
+    @include button__main(10.5px, 29.5px, $main_green, $white, 4px);
 
     &:hover {
-      @include button__hover($hover_green)
+      @include hover__main($hover_green)
     }
   }
 }

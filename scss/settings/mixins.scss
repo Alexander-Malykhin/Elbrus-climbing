@@ -7,7 +7,7 @@
   max-width: $width;
 }
 
-@mixin button($padding_first,$padding_last,$background,$color,$border) {
+@mixin button__main($padding_first,$padding_last,$background,$color,$border) {
   padding: $padding_first $padding_last;
   background-color: $background;
   color: $color;
@@ -15,7 +15,22 @@
   transition: 0.3s;
 }
 
-@mixin button__hover($color) {
+@mixin button__secondary($padding_first,$padding_last,$border-color,$color,$border) {
+  padding: $padding_first $padding_last;
+  border: 1px solid $border-color;
+  color: $color;
+  border-radius: $border;
+  transition: 0.3s;
+}
+
+
+@mixin hover__main($color) {
   background-color: $color;
+  transition: 0.3s ease-in-out;
+}
+
+@mixin hover__secondary($color) {
+  color: $color;
+  border-color: $color;
   transition: 0.3s ease-in-out;
 }

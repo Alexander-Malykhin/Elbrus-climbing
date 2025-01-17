@@ -1,0 +1,143 @@
+@import "./settings/colors";
+@import "./settings/mixins";
+@import "./settings/fonts";
+
+
+.program {
+  margin-top: 56px;
+
+
+  &__top {
+    margin: 24px 0 33px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+
+  &__middle {
+    padding: 13px 0;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__bottom {
+    margin-top: 43px;
+  }
+
+  &__information {
+    display: flex;
+    max-width: 820px;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+
+    &-top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    &-title {
+      @include typography($fz_24, $fw_600)
+    }
+
+    &-text {
+      @include typography($fz_16, $fw_400);
+      line-height: 140%;
+    }
+  }
+
+  &__way {
+    height: auto;
+    max-width: 398px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    background-color: $gray_light;
+
+
+    &-text {
+      line-height: 140%;
+      @include typography($fz_16, $fw_400);
+    }
+
+    &-color {
+      @include typography($fz_16, $fw_400);
+      color: $gray;
+    }
+  }
+
+  &__background {
+    background-color: $gray_light;
+    border-bottom: 1px solid rgba($gray, 0.2);
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    &-item {
+      @include typography($fz_16, $fw_500);
+      cursor: pointer;
+      color: $gray;
+    }
+  }
+
+  &__active {
+    color: $black;
+  }
+
+  &__panel {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    &-text {
+      @include typography($fz_16, $fw_600);
+      color: $gray;
+    }
+
+    &-color {
+      color: $main_green;
+    }
+  }
+
+  &__button {
+    &-favorites {
+      display: inline-block;
+      @include typography($fz_16, $fw_500);
+      color: $main_green;
+    }
+
+    &-download {
+      @include typography($fz_16, $fw_500);
+      @include button__secondary(7.5px, 17.5px, $main_green, $main_green, 4px);
+
+      &:hover {
+        @include hover__secondary($hover_green)
+      }
+    }
+
+    &-order {
+      @include typography($fz_16, $fw_500);
+      @include button__main(7.5px, 25.5px, $main_green, $white, 4px);
+
+      &:hover {
+        @include hover__main($hover_green)
+      }
+    }
+  }
+
+
+
+}

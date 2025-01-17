@@ -5,6 +5,7 @@
 @import "./settings/mixins";
 //SECTIONS
 @import "./header";
+@import "./program";
 
 * {
   font-family: "Inter", sans-serif;
@@ -15,4 +16,24 @@
   @include container(1290px);
   padding: 0 5px;
   margin: 0 auto;
+}
+
+.progress {
+  width: 162px;
+  height: 2px;
+  background-color: rgba($gray, 0.3);
+  position: relative;
+  z-index: 1;
+
+  &__program {
+    &:after {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 2px;
+      background-color: $red;
+    }
+  }
 }
