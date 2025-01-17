@@ -6,3 +6,16 @@
 @mixin container($width) {
   max-width: $width;
 }
+
+@mixin button($padding_first,$padding_last,$background,$color,$border) {
+  padding: $padding_first $padding_last;
+  background-color: $background;
+  color: $color;
+  border-radius: $border;
+  transition: 0.3s;
+}
+
+@mixin button__hover($color) {
+  background-color: $color;
+  transition: 0.3s ease-in-out;
+}

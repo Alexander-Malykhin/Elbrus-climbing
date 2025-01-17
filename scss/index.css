@@ -113,6 +113,12 @@ legend {
   justify-content: space-between;
   gap: 10px;
 }
+.header__content-bottom {
+  margin-top: 23px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 .header__logo {
   max-width: 100%;
   height: auto;
@@ -250,6 +256,66 @@ legend {
   cursor: pointer;
   width: 31px;
   height: 31px;
+}
+.header__description {
+  display: flex;
+  gap: 48px;
+}
+.header__description-item {
+  display: inline-block;
+}
+.header__description-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+.header__description-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+.header__description-level {
+  padding: 12px 0 10px 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+}
+.header__description-column {
+  height: 28px;
+  width: 11px;
+  border: 1px solid #FFFFFF;
+  border-radius: 1.5px;
+}
+.header__description-column:first-child {
+  height: 11px;
+}
+.header__description-column:nth-child(2) {
+  height: 20px;
+}
+.header__describe {
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+.header__describe-color {
+  color: #4DD2A3;
+}
+.header__button {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10.5px 29.5px;
+  background-color: #4DD2A3;
+  color: #FFFFFF;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.header__button:hover {
+  background-color: #2BBF8B;
+  transition: 0.3s ease-in-out;
+}
+
+.active__column {
+  background-color: #FFFFFF;
 }
 
 * {
