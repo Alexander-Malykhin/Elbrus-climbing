@@ -1,0 +1,94 @@
+@import "./settings/colors";
+@import "./settings/mixins";
+@import "./settings/fonts";
+
+.footer {
+  margin-top: 70px;
+  background-color: $black;
+  padding: 40px 0;
+
+  &__content {
+    display: grid;
+    grid-template-areas: "first middle last";
+    gap: 15px;
+    grid-template-rows: 200px;
+    justify-content: space-between;
+  }
+
+  &__column {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-first {
+      align-items: flex-start;
+    }
+
+    &-middle {
+      align-items: center;
+    }
+
+    &-last {
+      align-items: flex-end;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &-star {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    &-number {
+      @include typography($fz_18, $fw_600);
+      color: $white;
+    }
+
+    &-sum {
+      @include typography($fz_18, $fw_400);
+      color: $gray_footer;
+    }
+  }
+
+  &__carts {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__policy {
+    @include typography($fz_16, $fw_500);
+    color: $white;
+    opacity: 0.6;
+  }
+
+  &__row {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__local {
+    @include typography($fz_16, $fw_400);
+    max-width: 178px;
+    width: 100%;
+    color: $white;
+    line-height: 140%;
+    text-align: right;
+  }
+
+  &__links {
+    display: flex;
+    gap: 20px;
+  }
+}

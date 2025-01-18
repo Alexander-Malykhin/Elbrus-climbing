@@ -12,6 +12,9 @@
 @import "./price";
 @import "./choice";
 @import "./information";
+@import "./reviews";
+@import "./more";
+@import "./footer";
 
 * {
   font-family: "Inter", sans-serif;
@@ -110,6 +113,30 @@
       position: absolute;
       left: 0;
       width: calc(18px * 7);
+      height: 2px;
+      background-color: $red;
+    }
+  }
+
+  &__reviews {
+    &:after {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      left: 0;
+      width: calc(18px * 8);
+      height: 2px;
+      background-color: $red;
+    }
+  }
+
+  &__more {
+    &:after {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      left: 0;
+      width: calc(18px * 9);
       height: 2px;
       background-color: $red;
     }
