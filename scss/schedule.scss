@@ -1,0 +1,79 @@
+@import "./settings/colors";
+@import "./settings/mixins";
+@import "./settings/fonts";
+
+.schedule {
+  margin-top: 162px;
+
+  &__content {
+
+    &-top {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      max-width: 1040px;
+      width: 100%;
+    }
+  }
+
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    max-width: 1040px;
+    width: 100%;
+    gap: 2px;
+
+    &-item {
+      display: grid;
+      grid-template-columns: 100px 1fr 17px;
+      height: auto;
+      justify-content: flex-start;
+      align-items: center;
+      border-bottom: 1px solid rgba($gray, 0.5);
+      border-radius: 2px;
+      gap: 16px;
+      padding: 16px 24px;
+    }
+
+    &-title {
+      @include typography($fz_16, $fw_600);
+    }
+
+    &-text {
+      @include typography($fz_16, $fw_400);
+      line-height: 140%;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    &-day {
+      @include typography($fz_16, $fw_400);
+      color: $gray;
+    }
+  }
+
+  &__button {
+    &-list {
+      align-self: flex-end;
+      @include typography($fz_16, $fw_400);
+      color: $gray;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include typography($fz_16, $fw_400);
+      color: $gray;
+    }
+  }
+}
+

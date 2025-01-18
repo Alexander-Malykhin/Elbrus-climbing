@@ -8,6 +8,7 @@
 @import "./program";
 @import "./route";
 @import "./gallery";
+@import "./schedule";
 
 * {
   font-family: "Inter", sans-serif;
@@ -58,6 +59,18 @@
       position: absolute;
       left: 0;
       width: calc(16px * 3);
+      height: 2px;
+      background-color: $red;
+    }
+  }
+
+  &__schedule {
+    &:after {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      left: 0;
+      width: calc(16px * 4);
       height: 2px;
       background-color: $red;
     }

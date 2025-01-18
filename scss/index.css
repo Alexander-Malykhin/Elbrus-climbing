@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -590,6 +591,71 @@ legend {
   border-radius: 4px;
 }
 
+.schedule {
+  margin-top: 162px;
+}
+.schedule__content-top {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 1040px;
+  width: 100%;
+}
+.schedule__list {
+  display: flex;
+  flex-direction: column;
+  max-width: 1040px;
+  width: 100%;
+  gap: 2px;
+}
+.schedule__list-item {
+  display: grid;
+  grid-template-columns: 100px 1fr 17px;
+  height: auto;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid rgba(126, 134, 154, 0.5);
+  border-radius: 2px;
+  gap: 16px;
+  padding: 16px 24px;
+}
+.schedule__list-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+.schedule__list-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+}
+.schedule__list-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 100%;
+  width: 100%;
+}
+.schedule__list-day {
+  font-size: 16px;
+  font-weight: 400;
+  color: #7E869A;
+}
+.schedule__button-list {
+  align-self: flex-end;
+  font-size: 16px;
+  font-weight: 400;
+  color: #7E869A;
+}
+.schedule__button-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #7E869A;
+}
+
 * {
   font-family: "Inter", sans-serif;
   color: #222222;
@@ -632,6 +698,15 @@ legend {
   position: absolute;
   left: 0;
   width: 48px;
+  height: 2px;
+  background-color: #FF0002;
+}
+.progress__schedule:after {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  width: 64px;
   height: 2px;
   background-color: #FF0002;
 }
