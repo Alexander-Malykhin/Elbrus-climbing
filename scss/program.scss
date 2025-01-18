@@ -2,7 +2,6 @@
 @import "./settings/mixins";
 @import "./settings/fonts";
 
-
 .program {
   margin-top: 56px;
 
@@ -42,10 +41,6 @@
       justify-content: space-between;
       align-items: center;
       gap: 10px;
-    }
-
-    &-title {
-      @include typography($fz_24, $fw_600)
     }
 
     &-text {
@@ -112,6 +107,61 @@
     }
   }
 
+  &__conditions {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+
+    &-item {
+      max-width: 300px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    &-img {
+      width: 30px;
+      height: auto;
+    }
+
+    &-level {
+      padding-top: 10px;
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+    }
+
+    &-column {
+      height: 20px;
+      width: 8px;
+      border: 1px solid $gray;
+      border-radius: 1.1px;
+
+      &:first-child {
+        height: 8px;
+      }
+
+      &:nth-child(2) {
+        height: 15px;
+      }
+    }
+
+    &-title {
+      margin-top: 8px;
+      @include typography($fz_16, $fw_600);
+      color: $gray;
+      text-transform: uppercase;
+    }
+
+    &-text {
+      line-height: 140%;
+      @include typography($fz_16, $fw_400);
+    }
+  }
+
   &__button {
     &-favorites {
       display: inline-block;
@@ -136,8 +186,19 @@
         @include hover__main($hover_green)
       }
     }
+
+    &-photo {
+      margin-top: 24px;
+      @include typography($fz_16, $fw_500);
+      @include button__secondary(7.5px, 25.5px, $main_green, $main_green, 4px);
+
+      &:hover {
+        @include hover__secondary($hover_green)
+      }
+    }
   }
+}
 
-
-
+.active__conditions-column {
+  background-color: $gray;
 }

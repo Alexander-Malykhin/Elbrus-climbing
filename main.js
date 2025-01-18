@@ -1,5 +1,6 @@
 const BUTTON_ORDER = document.querySelector('.header__button');
 const BUTTON_DOWNLOAD = document.querySelector('.program__button-download')
+const BUTTON__PHOTO = document.querySelector('.program__button-photo')
 
 const buttonOrderClick = (button) => {
     button.addEventListener('mousedown', () => {
@@ -13,3 +14,4 @@ const buttonOrderClick = (button) => {
 
 buttonOrderClick(BUTTON_ORDER)
 buttonOrderClick(BUTTON_DOWNLOAD)
+buttonOrderClick(BUTTON__PHOTO)

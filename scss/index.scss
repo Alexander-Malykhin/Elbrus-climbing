@@ -6,6 +6,8 @@
 //SECTIONS
 @import "./header";
 @import "./program";
+@import "./route";
+@import "./gallery";
 
 * {
   font-family: "Inter", sans-serif;
@@ -36,4 +38,32 @@
       background-color: $red;
     }
   }
+
+  &__route {
+    &:after {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      left: 0;
+      width: calc(16px * 2);
+      height: 2px;
+      background-color: $red;
+    }
+  }
+
+  &__gallery {
+    &:after {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      left: 0;
+      width: calc(16px * 3);
+      height: 2px;
+      background-color: $red;
+    }
+  }
+}
+
+.section__title {
+  @include typography($fz_24, $fw_600)
 }
