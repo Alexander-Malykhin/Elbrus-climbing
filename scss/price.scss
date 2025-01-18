@@ -1,0 +1,203 @@
+@import "./settings/colors";
+@import "./settings/mixins";
+@import "./settings/fonts";
+
+
+.price {
+  margin-top: 162px;
+
+  &__content {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  &__lists {
+    margin-top: 60px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+
+    &-column {
+      max-width: 570px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    &-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    &-title {
+      @include typography($fz_16, $fw_600);
+      color: $gray;
+      text-transform: uppercase;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    &-first {
+      :before {
+        content: '\2014';
+        color: $main_green;
+      }
+    }
+
+    &-last {
+      :before {
+        content: '\2014';
+        color: $red;
+      }
+    }
+  }
+}
+
+
+.card {
+  max-width: 414px;
+  width: 100%;
+  height: 424px;
+  padding: 40px;
+  border-radius: 6px;
+  box-shadow: 0 4px 24px 0 rgba($black, 0.06);
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+
+    &-title {
+      line-height: 140%;
+      @include typography($fz_24, $fw_600);
+    }
+
+    &-text {
+      line-height: 140%;
+      color: $gray;
+      @include typography($fz_12, $fw_400);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+
+  &__line {
+    max-width: 182px;
+    width: 100%;
+    height: 1px;
+    background-color: rgba($gray, 0.2);
+  }
+
+  &__price {
+    @include typography($fz_30, $fw_600);
+    color: $main_green;
+  }
+
+  &__description {
+    @include typography($fz_12, $fw_400);
+    max-width: 140px;
+    width: 100%;
+    line-height: 140%;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    text-align: center;
+
+    &-text {
+      @include typography($fz_16, $fw_400);
+      line-height: 140%;
+    }
+  }
+
+  &__first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 34px;
+
+    &-old {
+      line-height: 140%;
+      color: $gray;
+      text-decoration: line-through;
+    }
+
+    &-price {
+      line-height: 140%;
+      color: $gray;
+      @include typography($fz_16, $fw_400);
+    }
+
+    &-bottom {
+      margin-top: 46px;
+    }
+
+    &-conditions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &-span {
+      @include typography($fz_12, $fw_400);
+      color: $main_green;
+    }
+  }
+
+  &__last {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 22px;
+
+    &-middle {
+      margin-top: 33px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 17px;
+    }
+
+    &-bottom {
+      margin-top: 22px;
+    }
+
+  }
+
+  &__color {
+    color: $main_green;
+  }
+
+  &__accent {
+    @include typography($fz_16, $fw_600);
+  }
+}

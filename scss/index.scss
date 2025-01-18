@@ -9,6 +9,9 @@
 @import "./route";
 @import "./gallery";
 @import "./schedule";
+@import "./price";
+@import "./choice";
+@import "./information";
 
 * {
   font-family: "Inter", sans-serif;
@@ -46,7 +49,7 @@
       z-index: 2;
       position: absolute;
       left: 0;
-      width: calc(16px * 2);
+      width: calc(18px * 2);
       height: 2px;
       background-color: $red;
     }
@@ -58,7 +61,7 @@
       z-index: 2;
       position: absolute;
       left: 0;
-      width: calc(16px * 3);
+      width: calc(18px * 3);
       height: 2px;
       background-color: $red;
     }
@@ -70,7 +73,43 @@
       z-index: 2;
       position: absolute;
       left: 0;
-      width: calc(16px * 4);
+      width: calc(18px * 4);
+      height: 2px;
+      background-color: $red;
+    }
+  }
+
+  &__price {
+    &:after {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      left: 0;
+      width: calc(18px * 5);
+      height: 2px;
+      background-color: $red;
+    }
+  }
+
+  &__choice {
+    &:after {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      left: 0;
+      width: calc(18px * 6);
+      height: 2px;
+      background-color: $red;
+    }
+  }
+
+  &__information {
+    &:after {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      left: 0;
+      width: calc(18px * 7);
       height: 2px;
       background-color: $red;
     }

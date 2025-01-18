@@ -1,0 +1,113 @@
+@import "./settings/colors";
+@import "./settings/mixins";
+@import "./settings/fonts";
+
+
+.choice {
+  margin-top: 162px;
+
+  &__content {
+    margin-top: 24px;
+  }
+
+  &__table {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+
+    &-header {
+      padding: 29px 24px;
+      display: grid;
+      width: 100%;
+      grid-template-columns: 120px 470px 92px 92px 173px;
+      justify-content: space-between;
+      box-shadow: 0 4px 24px 0 rgba($black, 0.06);
+      border-radius: 6px;
+    }
+
+    &-title {
+      @include typography($fz_16, $fw_600);
+      text-transform: uppercase;
+
+      &:nth-child(2) {
+        padding-left: 70px;
+      }
+    }
+
+    &-row {
+      display: grid;
+      padding: 29px 24px;
+      grid-template-columns: 114px 470px 92px 92px 173px;
+      box-shadow: 0 4px 24px 0 rgba($black, 0.06);
+      border-radius: 2px;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-date {
+      @include typography($fz_16, $fw_400);
+    }
+
+    &-information {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    &-image {
+      width: 64px;
+      height: 64px;
+      border-radius: 100%;
+    }
+
+    &-place {
+      justify-self: center;
+    }
+
+    &-line {
+      display: inline-block;
+      width: 10px;
+      height: 1px;
+      background: $black;
+    }
+
+    &-old {
+      line-height: 140%;
+      color: $gray;
+      @include typography($fz_16, $fw_400);
+      text-decoration: line-through;
+    }
+
+    &-new {
+      @include typography($fz_16, $fw_600);
+    }
+
+    &-lastdate {
+      line-height: 140%;
+      color: $gray;
+      @include typography($fz_16, $fw_400);
+    }
+
+    &-button {
+      @include typography($fz_16, $fw_500);
+      @include button__main(7.5px, 25px, $main_green, $white, 4px);
+
+      &:hover {
+        @include hover__main($hover_green)
+      }
+    }
+
+    &-name {
+      @include typography($fz_20, $fw_400);
+      color: $main_green;
+      line-height: 140%;
+    }
+
+    &-red {
+      color: $red;
+    }
+  }
+}
