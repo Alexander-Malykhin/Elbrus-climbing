@@ -9,7 +9,19 @@
   background-position: top center;
   max-width: 100%;
   height: auto;
-  padding: 30px 0 21px 0;
+  padding: 30px 0 20px 0;
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+  }
 
   &__content {
     display: flex;
@@ -47,6 +59,10 @@
     display: flex;
     align-items: center;
     gap: 40px;
+  }
+
+  &__slider {
+    display: none;
   }
 
   &__navigation {
@@ -196,8 +212,16 @@
   }
 
   &__description {
-    display: flex;
-    gap: 48px;
+
+    &-desktop {
+      display: flex;
+      gap: 48px;
+
+    }
+
+    &-mobile {
+      display: none;
+    }
 
     &-item {
       display: inline-block;
@@ -255,7 +279,302 @@
   }
 }
 
+.burger {
+  display: none;
+}
+
+@media only screen and (max-width: 1300px) {
+  .header {
+    &__describe {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 1034px) {
+  .header__phone {
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 834px) {
+  .header {
+
+    &__content {
+
+      &-bottom {
+        margin-top: 50px;
+      }
+    }
+
+    &__navigation {
+      display: none;
+    }
+
+    &__block {
+      display: none;
+    }
+
+    &__panel {
+      gap: 24px;
+    }
+
+    &__information {
+      max-width: 530px;
+
+      &-title {
+        @include typography($fz_35, $fw_700);
+      }
+
+      &-button {
+        margin-top: 30px;
+      }
+    }
+
+    &__description {
+
+      &-desktop {
+        display: none;
+      }
+
+      &-order {
+        display: none;
+      }
+
+      &-bottom {
+        display: none;
+      }
+
+      &-mobile {
+        display: flex;
+        gap: 65px;
+      }
+
+      &-list {
+        display: flex;
+        gap: 64px;
+      }
+
+      &-item {
+        text-align: center;
+      }
+
+      &-title {
+        @include typography($fz_18, $fw_700);
+      }
+
+      &-text {
+        @include typography($fz_12, $fw_400);
+      }
+    }
+
+    &__describe {
+      display: none;
+    }
+
+    &__button {
+      @include button__main(7.5px, 25px, $main_green, $white, 4px);
+    }
+  }
+
+  .burger {
+    cursor: pointer;
+    display: block;
+  }
+}
+
+
+@media only screen and (max-width: 665px) {
+  .header {
+    padding: 0;
+    background: none;
+
+    &__logo {
+      width: 57px;
+      height: 26px;
+    }
+
+    &__content {
+
+      &-top {
+        padding: 12px 0;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 50px;
+          background: rgba($black, 0.7);
+          z-index: -1;
+        }
+      }
+
+      &-middle {
+        margin: 8px 0;
+      }
+
+      &-bottom {
+        margin-top: 0;
+      }
+    }
+
+    &__phone {
+      display: none;
+    }
+
+    &__navigation {
+      display: none;
+    }
+
+    &__block {
+      display: none;
+    }
+
+    &__panel {
+      gap: 24px;
+    }
+
+    &__information {
+      width: 100%;
+
+      &-list {
+        display: none;
+      }
+
+      &-title {
+        @include typography($fz_18, $fw_700);
+        color: $black;
+      }
+
+      &-button {
+        display: none;
+      }
+    }
+
+    &__links {
+      display: none;
+    }
+
+    &__description {
+
+      &-bottom {
+        border-top: 1px solid rgba($black, 0.2);
+        padding: 8px 0;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-chat {
+        border-radius: 100%;
+        border: 1px solid $main_green;
+        padding: 14px 12px 10px 12px;
+      }
+
+      &-button {
+        @include typography($fz_16, $fw_500);
+        @include button__main(10.5px, 48.5px, $main_green, $white, 4px);
+
+        &:hover {
+          @include hover__main($hover_green)
+        }
+      }
+
+      &-desktop {
+        display: none;
+      }
+
+      &-mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 10px;
+      }
+
+      &-span {
+        color: $main_green;
+      }
+
+      &-order {
+        @include typography($fz_13, $fw_400);
+      }
+
+      &-list {
+        justify-content: space-between;
+        margin-top: 20px;
+        display: flex;
+        gap: 36px;
+        max-width: 100%;
+      }
+
+      &-item {
+        text-align: center;
+      }
+
+      &-title {
+        color: $gray;
+        @include typography($fz_18, $fw_700);
+      }
+
+      &-text {
+        color: $gray;
+        @include typography($fz_12, $fw_400);
+      }
+    }
+
+    &__slider {
+      overflow-x: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 288px);
+      grid-template-rows: 192px;
+      gap: 8px;
+
+      &-item {
+        position: relative;
+        display: inline-block;
+      }
+
+      &-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 13px 14px;
+        width: 44px;
+        height: 44px;
+        border-radius: 100%;
+        border: 1px solid $white;
+        background: rgba($white, 0.2);
+      }
+
+      &-angle {
+        width: 16px;
+        height: 16px;
+      }
+
+      &-img {
+        position: relative;
+        height: 192px;
+        border-radius: 2px;
+      }
+    }
+
+    &__describe {
+      display: none;
+    }
+
+    &__button {
+      display: none;
+    }
+  }
+}
+
 .active__description-column {
   background-color: $white;
 }
+
+
 

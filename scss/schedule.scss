@@ -3,7 +3,7 @@
 @import "./settings/fonts";
 
 .schedule {
-  margin-top: 162px;
+  margin-top: 52px;
 
   &__content {
 
@@ -17,6 +17,9 @@
     }
   }
 
+  &__mobile-list {
+    display: none;
+  }
 
   &__list {
     display: flex;
@@ -73,6 +76,56 @@
       justify-content: center;
       @include typography($fz_16, $fw_400);
       color: $gray;
+    }
+  }
+}
+
+@media only screen and (max-width: 665px) {
+  .schedule {
+    margin-top: 0;
+
+    &__list {
+      display: none;
+    }
+
+    &__mobile {
+      margin-top: 16px;
+
+      &-list {
+        display: inline-block;
+      }
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+        padding: 8px 16px 16px 16px;
+        gap: 16px;
+      }
+
+      &-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+
+      &-title {
+        max-width: 240px;
+        @include typography($fz_16, $fw_600);
+      }
+
+      &-span {
+        color: $gray;
+      }
+
+      &-text {
+        @include typography($fz_12, $fw_400);
+      }
+    }
+
+    &__button {
+      &-list {
+        display: none;
+      }
     }
   }
 }

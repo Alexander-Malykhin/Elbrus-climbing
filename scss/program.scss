@@ -3,17 +3,14 @@
 @import "./settings/fonts";
 
 .program {
-  margin-top: 56px;
-
 
   &__top {
     margin: 24px 0 33px 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 10px;
+    gap: 60px;
   }
-
 
   &__middle {
     padding: 13px 0;
@@ -27,13 +24,21 @@
     margin-top: 43px;
   }
 
+  &__price {
+    display: none;
+  }
+
+  &__buttons {
+    display: none;
+  }
+
   &__information {
     display: flex;
-    max-width: 820px;
     width: 100%;
+    max-width: 820px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
+    gap: 62px;
 
     &-top {
       width: 100%;
@@ -50,9 +55,8 @@
   }
 
   &__way {
-    height: auto;
-    max-width: 398px;
-    width: 100%;
+    height: 170px;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -72,8 +76,15 @@
   }
 
   &__background {
-    background-color: $gray_light;
-    border-bottom: 1px solid rgba($gray, 0.2);
+
+    &-desktop {
+      background-color: $gray_light;
+      border-bottom: 1px solid rgba($gray, 0.2);
+    }
+
+    &-mobile {
+      display: none;
+    }
   }
 
   &__list {
@@ -112,6 +123,10 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 10px;
+
+    &-information {
+      display: none;
+    }
 
     &-item {
       max-width: 300px;
@@ -160,6 +175,10 @@
       line-height: 140%;
       @include typography($fz_16, $fw_400);
     }
+
+    &-mobile {
+      display: none;
+    }
   }
 
   &__button {
@@ -194,6 +213,257 @@
 
       &:hover {
         @include hover__secondary($hover_green)
+      }
+    }
+
+    &-mobile {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .program {
+    margin-top: 0;
+
+    &__middle {
+      padding: 21px 0;
+    }
+
+    &__way {
+      &-mobile {
+        display: none;
+      }
+    }
+
+    &__panel {
+      &-text {
+        display: none;
+      }
+    }
+
+    &__conditions {
+
+      &-route {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1034px) {
+  .program {
+
+    &__way {
+      height: 192px;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 834px) {
+  .program {
+
+    &__top {
+      flex-direction: column;
+    }
+
+    &__middle {
+      padding: 21px 0;
+    }
+
+    &__bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    &__price {
+      display: flex;
+      padding: 20px 0 40px 0;
+      align-items: center;
+      justify-content: space-between;
+
+      &-date {
+        @include typography($fz_16, $fw_400);
+        line-height: 140%;
+      }
+
+      &-span {
+        color: $main_green;
+      }
+
+      &-line {
+        height: 60px;
+        width: 1px;
+        background-color: rgba($gray, 0.2);
+      }
+
+      &-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      &-accent {
+        @include typography($fz_18, $fw_700);
+      }
+
+      &-item {
+        @include typography($fz_16, $fw_400);
+        line-height: 140%;
+
+        &:nth-child(2) {
+          text-decoration: line-through;
+          text-decoration-color: $red;
+        }
+      }
+    }
+
+    &__background {
+
+      &-mobile {
+        display: block;
+        background-color: $gray_light;
+        border-bottom: 1px solid rgba($gray, 0.2);
+      }
+
+      &-desktop {
+        display: none;
+      }
+    }
+
+    &__panel {
+      display: none;
+    }
+
+    &__way {
+      height: auto;
+
+      &-desktop {
+        display: none;
+      }
+
+      &-mobile {
+        display: flex;
+      }
+    }
+
+    &__conditions {
+      flex-direction: column;
+      gap: 10px;
+
+      &-item {
+        max-width: 343px;
+        width: 100%;
+      }
+
+      &-information {
+        max-width: 343px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      &-route {
+        display: block;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 665px) {
+  .program {
+
+    &__top {
+      flex-direction: column;
+    }
+
+    &__middle {
+      padding: 21px 0;
+    }
+
+    &__bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    &__price {
+      display: none;
+    }
+
+    &__background {
+
+      &-mobile {
+        display: none;
+      }
+    }
+
+    &__way {
+      display: none;
+    }
+
+    &__information {
+      align-items: normal;
+      gap: 12px;
+
+      &-text {
+        @include typography($fz_12, $fw_400);
+      }
+    }
+
+    &__conditions {
+      flex-direction: column;
+      gap: 40px;
+
+      &-item {
+        max-width: 343px;
+        width: 100%;
+      }
+
+      &-information {
+        display: none;
+      }
+
+      &-route {
+        display: none;
+      }
+    }
+
+    &__buttons {
+      margin-top: 38px;
+      display: flex;
+      justify-content: space-between;
+
+      &-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        border: 1px solid $main_green;
+        border-radius: 4px;
+        padding: 12px;
+      }
+
+      &-text {
+        color: $gray;
+        @include typography($fz_12, $fw_400);
+      }
+    }
+
+    &__button {
+      &-favorites {
+        display: none;
+      }
+
+      &-download {
+        display: none;
+      }
+
+      &-mobile {
+        display: block;
       }
     }
   }

@@ -65,17 +65,29 @@
   &__carts {
     display: flex;
     gap: 10px;
+
+    &-mobile {
+      display: none;
+    }
   }
 
   &__policy {
     @include typography($fz_16, $fw_500);
     color: $white;
     opacity: 0.6;
+
+    &-mobile {
+      display: none;
+    }
   }
 
   &__row {
     display: flex;
     gap: 16px;
+
+    &-mobile {
+      display: none;
+    }
   }
 
   &__local {
@@ -85,10 +97,95 @@
     color: $white;
     line-height: 140%;
     text-align: right;
+
+    &-mobile {
+      display: none;
+    }
   }
 
   &__links {
     display: flex;
     gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 665px) {
+  .footer {
+    margin-top: 20px;
+
+    &__content {
+      display: grid;
+      grid-template-areas: "first "
+                            "middle"
+                            "last";
+      grid-template-columns: 1fr;
+      gap: 15px;
+      grid-template-rows: auto auto auto;
+      justify-content: space-between;
+    }
+
+    &__column {
+      display: flex;
+
+      &-first {
+        flex-direction: row;
+      }
+
+      &-middle {
+        align-items: flex-start;
+        gap: 32px;
+      }
+
+      &-last {
+        margin-top: 30px;
+        align-items: flex-start;
+        gap: 30px;
+      }
+    }
+
+    &__carts {
+      display: none;
+    }
+
+    &__policy {
+     display: none;
+    }
+
+
+    &__policy-mobile {
+      @include typography($fz_16, $fw_500);
+      color: $white;
+      opacity: 0.6;
+    }
+
+    &__row {
+      display: none;
+    }
+
+    &__carts-mobile {
+      display: flex;
+      gap: 10px;
+    }
+
+    &__row-mobile {
+      display: flex;
+      gap: 16px;
+    }
+
+    &__local {
+      display: none;
+    }
+
+    &__local-mobile {
+      color: $white;
+      @include typography($fz_12, $fw_400);
+      max-width: 140px;
+      text-align: right;
+    }
+
+    &__links {
+      display: flex;
+      gap: 20px;
+    }
   }
 }

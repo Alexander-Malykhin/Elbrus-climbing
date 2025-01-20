@@ -35,20 +35,19 @@
                                 Магазин
                             </a>
                         </li>
-                        <li>
-                            <a href="tel:+74951087465" class="header__navigation-item">
-                                +7 495 108 74 65
-                            </a>
-                        </li>
-                        <li>
-                            <button class="header__navigation-button">
-                                Заказать звонок
-                            </button>
-                        </li>
                     </ul>
 
-                    <div class="header__panel">
+                    <div class="header__phone">
+                        <a href="tel:+74951087465" class="header__navigation-item">
+                            +7 495 108 74 65
+                        </a>
 
+                        <button class="header__navigation-button">
+                            Заказать звонок
+                        </button>
+                    </div>
+
+                    <div class="header__panel">
                         <a href="#" class="header__panel-icon">
                             <img src="./images/comments.png" alt="comments">
                         </a>
@@ -57,19 +56,27 @@
                             <img src="./images/bell.png" alt="bell">
                         </a>
 
-                        <div class="header__select">
-                            <div class="header__select-content">
-                                <span class="header__select-text">usd</span>
-                                <img src="./images/select-arrow.png" alt="arrow-select" class="header__select-arrow">
+                        <div class="header__block">
+                            <div class="header__select">
+                                <div class="header__select-content">
+                                    <span class="header__select-text">usd</span>
+                                    <img src="./images/select-arrow.png" alt="arrow-select"
+                                         class="header__select-arrow">
+                                </div>
                             </div>
+
+                            <span class="header__panel-language">en</span>
+
+                            <a href="#" class="header__panel-user">
+                                <img src="./images/user.png" alt="user">
+                            </a>
                         </div>
 
-                        <span class="header__panel-language">en</span>
-
-                        <a href="#" class="header__panel-user">
-                            <img src="./images/user.png" alt="user">
-                        </a>
+                        <button class="burger">
+                            <img src="./images/burger.png" alt="burger">
+                        </button>
                     </div>
+
                 </nav>
             </div>
 
@@ -81,15 +88,13 @@
                         <li class="header__information-item">Треккинг</li>
                     </ul>
 
-                    <h1 class="header__information-title">
-                        Тур в Непал: Трек вокруг Аннапурны и озеро Тиличо, Гималаи
-                    </h1>
+                    <h1 class="header__information-title">Тур в Непал: Трек вокруг Аннапурны и озеро Тиличо, Гималаи</h1>
+
 
                     <button class="header__information-button">
                         <img src="./images/triangle.png" alt="button">
                     </button>
                 </div>
-
 
                 <div class="header__links">
                     <p class="header__links-text">
@@ -104,46 +109,102 @@
                 </div>
             </div>
 
+            <div class="header__slider">
+                <div class="header__slider-item">
+                    <img src="./images/background_header.png" alt="" class="header__slider-img">
+                    <button class="header__slider-button">
+                        <img src="./images/triangle.png" alt="button" class="header__slider-angle">
+                    </button>
+                </div>
+                <div class="header__slider-item">
+                    <img src="./images/background_header.png" alt="" class="header__slider-img">
+                    <button class="header__slider-button">
+                        <img src="./images/triangle.png" alt="button" class="header__slider-angle">
+                    </button>
+                </div>
+                <div class="header__slider-item">
+                    <img src="./images/background_header.png" alt="" class="header__slider-img">
+                    <button class="header__slider-button">
+                        <img src="./images/triangle.png" alt="button" class="header__slider-angle">
+                    </button>
+                </div>
+            </div>
+
             <div class="header__content-bottom">
-                <div class="header__description">
+                <div class="header__description-desktop">
                     <div class="header__description-item">
                         <div class="header__description-title">120 <span class="header__description-text">км</span>
                         </div>
                         <p class="header__description-text">Протяженность</p>
                     </div>
 
-                    <div>
+                    <div class="header__description-item">
                         <div class="header__description-title">15 <span class="header__description-text">дней</span>
                         </div>
                         <p class="header__description-text">Продолжительность</p>
                     </div>
 
-                    <div class="header_description-item">
-                        <div>
-                            <ul class="header__description-level">
-                                <li class="header__description-column active__description-column"></li>
-                                <li class="header__description-column"></li>
-                                <li class="header__description-column"></li>
-                            </ul>
-                        </div>
+                    <div class="header__description-item">
+                        <ul class="header__description-level">
+                            <li class="header__description-column active__description-column"></li>
+                            <li class="header__description-column"></li>
+                            <li class="header__description-column"></li>
+                        </ul>
 
                         <p class="header__description-text">Сложность</p>
                     </div>
 
-                    <div class="header_description-item">
-                        <div>
-                            <ul class="header__description-level">
-                                <li class="header__description-column active__column"></li>
-                                <li class="header__description-column"></li>
-                                <li class="header__description-column"></li>
-                            </ul>
-                        </div>
+                    <div class="header__description-item">
+                        <ul class="header__description-level">
+                            <li class="header__description-column active__column"></li>
+                            <li class="header__description-column"></li>
+                            <li class="header__description-column"></li>
+                        </ul>
 
                         <p class="header__description-text">Комфорт</p>
                     </div>
                 </div>
+
+
+                <div class="header__description-mobile">
+                    <div class="header__description-list">
+                        <div class="header__description-item">
+                            <div class="header__description-title">120</div>
+                            <p class="header__description-text">км</p>
+                        </div>
+
+                        <div class="header__description-item">
+                            <div class="header__description-title">15</div>
+                            <p class="header__description-text">дней</p>
+                        </div>
+
+                        <div class="header__description-item">
+                            <div class="header__description-title">1/3</div>
+
+                            <p class="header__description-text">Сложность</p>
+                        </div>
+
+                        <div class="header__description-item">
+                            <div class="header__description-title">1/4</div>
+                            <p class="header__description-text">Комфорт</p>
+                        </div>
+                    </div>
+                    <p class="header__description-order"><span class="header__description-span">27 заездов</span> и под заказ — от 78 000 ₽</p>
+
+                    <div class="header__description-bottom">
+                        <button class="header__description-button">
+                            Забронировать
+                        </button>
+
+                        <button class="header__description-chat">
+                            <img src="./images/comment-green.png" alt="green">
+                        </button>
+                    </div>
+                </div>
+
                 <p class="header__describe">18.08.2022, <span class="header__describe-color">ещё 27 заездов</span> и
                     <span class="header__describe-color"> под заказ</span> — от 78 000₽</p>
+
                 <button class="header__button">
                     Забронировать
                 </button>
@@ -152,9 +213,54 @@
     </div>
 </header>
 
-<main>
+
+<main class="main">
+
     <section class="program">
+        <div class="program__background-mobile">
+            <div class="container">
+                <div class="program__middle">
+                    <nav>
+                        <ul class="program__list">
+                            <li class="program__list-item program__active">Описание</li>
+                            <li class="program__list-item">Фото</li>
+                            <li class="program__list-item">Программа</li>
+                            <li class="program__list-item">Стоимость</li>
+                            <li class="program__list-item">Заезды</li>
+                            <li class="program__list-item">Информация</li>
+                        </ul>
+                    </nav>
+
+                    <div class="program__panel">
+                        <p class="program__panel-text">
+                            18.08.2022 и <span class="program__panel-color">ещё 27 заездов</span> — от 78 000 ₽
+                        </p>
+
+                        <button class="program__button-order">
+                            Забронировать
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container">
+            <div class="program__price">
+                <p class="program__price-date">
+                    18.08.2022, <span class="program__price-span">ещё 27 заездов</span> <br> возможен индивидуальный тур
+                    <br> и тур под заказ для частных групп
+                </p>
+
+                <span class="program__price-line"></span>
+
+                <ul class="program__price-list">
+                    <li class="program__price-item">до 10.08.2022</li>
+                    <li class="program__price-item">125 000 ₽</li>
+                    <li class="program__price-item">от <span class="program__price-accent">110 000 ₽</span>
+                    </li>
+                </ul>
+            </div>
+
             <div class="progress progress__program"></div>
             <div class="program__top">
                 <div class="program__information">
@@ -165,6 +271,10 @@
 
                         <button class="program__button-favorites">
                             Добавить в избранное
+                        </button>
+                        
+                        <button class="program__button-mobile">
+                            <img src="./images/heart-mobile.png" alt="">
                         </button>
                     </div>
 
@@ -181,9 +291,21 @@
                     <button class="program__button-download">
                         Скачать программу в PDF
                     </button>
+
+                    <div class="program__buttons">
+                        <button class="program__buttons-mobile">
+                            <img src="images/map.png" alt="map">
+                            <span class="program__buttons-text">Старт и финиш</span>
+                        </button>
+
+                        <button class="program__buttons-mobile">
+                            <img src="./images/download.png" alt="download">
+                            <span class="program__buttons-text">Программа в PDF</span>
+                        </button>
+                    </div>
                 </div>
 
-                <div class="program__way">
+                <div class="program__way program__way-desktop">
                     <p class="program__way-text">
                         <span class="program__way-color">Старт:</span> Интурист, пл. Ленина, 13, Пятигорск,
                         Ставропольский край 357503, Россия
@@ -197,7 +319,7 @@
             </div>
         </div>
 
-        <div class="program__background">
+        <div class="program__background-desktop">
             <div class="container">
                 <div class="program__middle">
                     <nav>
@@ -277,17 +399,33 @@
                         </p>
                     </div>
                 </div>
+
+                <div class="program__conditions-information">
+                    <div class="program__way program__way-mobile">
+                        <p class="program__way-text">
+                            <span class="program__way-color">Старт:</span> Интурист, пл. Ленина, 13, Пятигорск,
+                            Ставропольский край 357503, Россия
+                        </p>
+
+                        <p class="program__way-text">
+                            <span class="program__way-color">Финиш:</span> Интурист, пл. Ленина, 13, Пятигорск,
+                            Ставропольский край 357503, Россия
+                        </p>
+                    </div>
+                    <img src="./images/route_img.png" alt="route" class="program__conditions-route">
+                </div>
             </div>
+
         </div>
     </section>
 
-    <section class="route">
+    <section class="route section">
         <div class="container">
             <div class="progress progress__route"></div>
 
             <div class="route__content">
                 <h2 class="section__title">
-                    О программе
+                    Что будем делать?
                 </h2>
 
                 <div class="route__information">
@@ -329,7 +467,7 @@
         </div>
     </section>
 
-    <section class="gallery">
+    <section class="gallery section">
         <div class="container">
             <div class="gallery__content">
                 <div class="progress progress__gallery"></div>
@@ -362,7 +500,7 @@
         </div>
     </section>
 
-    <section class="schedule">
+    <section class="schedule section">
         <div class="container">
             <div class="schedule__content">
                 <div class="progress progress__schedule"></div>
@@ -470,11 +608,28 @@
                         </button>
                     </div>
                 </div>
+                <div class="schedule__mobile-list">
+                    <div class="schedule__mobile-item">
+                        <div class="schedule__mobile-header">
+                            <h3 class="schedule__mobile-title">
+                                <span class="schedule__mobile-span">1 день.</span> Переезд к точке начала трека - Чамдже
+                            </h3>
+
+                            <button class="schedule__mobile-button">
+                                <img src="./images/arrow-right.png" alt="arrow">
+                            </button>
+                        </div>
+
+                        <p class="schedule__mobile-text">
+                            Вам необходимо прилететь в Катманду не позднее, чем в 9:00 накануне начала нашего тура, чтобы успеть оформить TIMS и пермит (это необходимо делать в вашем присутствии). Но ещё лучше — прилететь за 2 дня до начала тура. Так вы сможете отдохнуть после дороги и начать осмотр города. В любом случае мы встретим вас в назначенное время на выходе из аэропорта Катманду (KTM) и отвезём в отель. Так вы сможете отдохнуть после дороги и начать осмотр города. В любом случае мы встретим вас в назначенное время.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="price">
+    <section class="price section">
         <div class="container">
             <div class="progress progress__price"></div>
 
@@ -487,6 +642,10 @@
                     <div class="card">
                         <div class="card__first">
                             <div class="card__top">
+                                <button class="card__arrow-right">
+                                    <img src="./images/arrow-right.png" alt="arrow-right">
+                                </button>
+
                                 <h2 class="card__top-title">
                                     Групповой тур
                                 </h2>
@@ -503,12 +662,17 @@
 
                             <div class="card__bottom card__first-bottom">
                                 <div class="card__line"></div>
-                                <ul class="card__list">
-                                    <li class="card__list-text">Для <span
-                                            class="card__accent card__color">бронирования</span> достаточно
-                                    </li>
-                                    <li class="card__last-text card__accent">25 000 ₽</li>
-                                </ul>
+
+                                <div class="card__list">
+                                    <p class="card__list-text">
+                                        Для <span class="card__accent card__color">бронирования</span> достаточно
+                                    </p>
+
+                                    <span class="card__list-text card__accent">
+                                        25 000 ₽
+                                    </span>
+                                </div>
+
 
                                 <button class="card__first-conditions">
                                     <img src="./images/info-alt.png" alt="info">
@@ -517,10 +681,13 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="card">
                         <div class="card__last">
                             <div class="card__top">
+                                <button class="card__arrow-left">
+                                    <img src="./images/arrow-left.png" alt="arrow-left">
+                                </button>
+
                                 <h2 class="card__top-title">
                                     Частный тур
                                 </h2>
@@ -558,11 +725,16 @@
                 <div class="price__lists">
                     <div class="price__lists-column">
                         <div class="price__lists-top">
-                            <img src="./images/check-box.png" alt="image">
-                            <h3 class="price__lists-title">В стоимость включено:</h3>
+                            <div class="price__lists-header">
+                                <img src="./images/check-box.png" alt="image">
+                                <h3 class="price__lists-title">В стоимость включено:</h3>
+                            </div>
+                            <button class="price__lists-button">
+                                <img src="./images/angle-up.png" alt="angle-up">
+                            </button>
                         </div>
 
-                        <ul class="price__lists-item">
+                        <ul class="price__lists-item price__show">
                             <li class="price__lists-first">
                                 <p class="price__lists-text">
                                     Консультации менеджеров на этапе подготовки
@@ -645,8 +817,13 @@
 
                     <div class="price__lists-column">
                         <div class="price__lists-top">
-                            <img src="./images/close.png" alt="image">
-                            <h3 class="price__lists-title">В стоимость не включено:</h3>
+                            <div class="price__lists-header">
+                                <img src="./images/close.png" alt="image">
+                                <h3 class="price__lists-title">В стоимость не включено:</h3>
+                            </div>
+                            <button class="price__lists-button">
+                                <img src="./images/angle-down.png" alt="angle-down">
+                            </button>
                         </div>
 
                         <ul class="price__lists-item">
@@ -675,7 +852,7 @@
         </div>
     </section>
 
-    <section class="choice">
+    <section class="choice section">
         <div class="container">
             <div class="progress progress__choice"></div>
 
@@ -784,7 +961,7 @@
         </div>
     </section>
 
-    <section class="information">
+    <section class="information section">
         <div class="container">
             <div class="progress progress__information"></div>
             <div class="information__content">
@@ -912,7 +1089,7 @@
         </div>
     </section>
 
-    <section class="reviews">
+    <section class="reviews section">
         <div class="container">
             <div class="progress progress__reviews"></div>
             <div class="reviews__content">
@@ -928,7 +1105,9 @@
         </div>
     </section>
 
-    <section class="more">
+    <section class="more section">
+
+
         <div class="container">
             <div class="progress progress__more"></div>
             <div class="more__content">
@@ -941,7 +1120,6 @@
                         Все туры
                     </button>
                 </div>
-
                 <div class="more__slider">
                     <button class="more__button-slider">
                         <img src="images/button_slider_left.png" alt="left">
@@ -1256,6 +1434,7 @@
                 </div>
             </div>
         </div>
+
     </section>
 
     <footer class="footer">
@@ -1272,6 +1451,10 @@
                         <img src="./images/payPal.png" alt="paypal" class="footer__carts-item">
                         <img src="./images/crypto.png" alt="crypto" class="footer__carts-item">
                     </div>
+
+                    <p class="footer__local-mobile">
+                        ELBRUS CLIMBING LLP LONDON, UK
+                    </p>
                 </div>
 
                 <div class="footer__column footer__column-middle">
@@ -1317,12 +1500,36 @@
                     <p class="footer__policy">
                         Политика конфиденциальности
                     </p>
+
+                    <div class="footer__row-mobile">
+                        <div class="header__select">
+                            <div class="header__select-content">
+                                <span class="header__select-text">usd</span>
+                                <img src="./images/select-arrow.png" alt="arrow-select" class="header__select-arrow">
+                            </div>
+                        </div>
+                        <div class="header__select">
+                            <div class="header__select-content">
+                                <span class="header__select-text">ru</span>
+                                <img src="./images/select-arrow.png" alt="arrow-select" class="header__select-arrow">
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="footer__column footer__column-last">
                     <p class="footer__local">
                         ELBRUS CLIMBING LLP LONDON, UK
                     </p>
+
+
+                    <div class="footer__carts-mobile">
+                        <img src="./images/visa.png" alt="visa" class="footer__carts-item">
+                        <img src="./images/masterCard.png" alt="mastercard" class="footer__carts-item">
+                        <img src="./images/payPal.png" alt="paypal" class="footer__carts-item">
+                        <img src="./images/crypto.png" alt="crypto" class="footer__carts-item">
+                    </div>
+
 
                     <div class="footer__row">
                         <div class="header__select">
@@ -1343,6 +1550,11 @@
                         <img src="./images/vk_footer.svg" alt="vk">
                         <img src="./images/instagram.svg" alt="instagram">
                     </div>
+
+                    <p class="footer__policy-mobile">
+                        Политика конфиденциальности
+                    </p>
+
                 </div>
             </div>
         </div>

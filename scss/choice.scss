@@ -4,7 +4,6 @@
 
 
 .choice {
-  margin-top: 162px;
 
   &__content {
     margin-top: 24px;
@@ -111,3 +110,11 @@
     }
   }
 }
+
+@media only screen and (max-width: 1034px) {
+  .choice {
+    display: none;
+  }
+}
+
+

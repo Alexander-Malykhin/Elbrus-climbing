@@ -4,8 +4,6 @@
 
 
 .price {
-  margin-top: 162px;
-
   &__content {
     margin-top: 24px;
     display: flex;
@@ -14,8 +12,8 @@
   }
 
   &__cards {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 414px);
     justify-content: center;
     gap: 20px;
   }
@@ -26,6 +24,16 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: 10px;
+
+    &-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &-button {
+      display: none;
+    }
 
     &-column {
       max-width: 570px;
@@ -73,10 +81,20 @@
 .card {
   max-width: 414px;
   width: 100%;
-  height: 424px;
+  height: auto;
   padding: 40px;
   border-radius: 6px;
   box-shadow: 0 4px 24px 0 rgba($black, 0.06);
+
+  &__arrow {
+    &-right {
+      display: none;
+    }
+
+    &-left {
+      display: none;
+    }
+  }
 
   &__top {
     display: flex;
@@ -87,6 +105,7 @@
     &-title {
       line-height: 140%;
       @include typography($fz_24, $fw_600);
+      text-transform: uppercase;
     }
 
     &-text {
@@ -128,7 +147,6 @@
     flex-direction: column;
     align-items: center;
     gap: 2px;
-    text-align: center;
 
     &-text {
       @include typography($fz_16, $fw_400);
@@ -200,4 +218,180 @@
   &__accent {
     @include typography($fz_16, $fw_600);
   }
+}
+
+@media only screen and (max-width: 834px) {
+  .price {
+    &__lists {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    &__cards {
+      grid-template-columns: repeat(2, auto);
+    }
+  }
+}
+
+@media only screen and (max-width: 665px) {
+
+  .price {
+    &__content {
+      overflow: hidden;
+    }
+
+    &__cards {
+      grid-template-columns: repeat(2, 288px);
+      justify-content: flex-start;
+    }
+
+    &__lists {
+      margin-top: 30px;
+
+      &-header {
+        display: flex;
+        align-items: center;
+      }
+
+      &-button {
+        display: block;
+      }
+
+      &-column {
+        border-radius: 2px;
+        max-width: 100%;
+        box-shadow: 0 4px 24px 0 rgba($black, 0.06);
+        padding: 8px 16px;
+      }
+
+      &-top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+
+      &-title {
+        @include typography($fz_16, $fw_600);
+        color: $gray;
+        text-transform: uppercase;
+        max-width: 130px;
+      }
+
+      &-item {
+        display: none;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      &-first {
+        :before {
+          content: '\2014';
+          color: $main_green;
+        }
+      }
+
+      &-last {
+        :before {
+          content: '\2014';
+          color: $red;
+        }
+      }
+    }
+  }
+
+  .card {
+    position: relative;
+    max-width: 288px;
+    height: 320px;
+    padding: 24px;
+    border-radius: 4px;
+    box-shadow: 0 4px 24px 0 rgba($black, 0.06);
+
+    &__top {
+      gap: 8px;
+    }
+
+    &__line {
+      max-width: 182px;
+      width: 100%;
+      height: 1px;
+      background-color: rgba($gray, 0.2);
+    }
+
+    &__price {
+      @include typography($fz_30, $fw_600);
+      color: $main_green;
+    }
+
+    &__description {
+      @include typography($fz_12, $fw_400);
+      max-width: 140px;
+      width: 100%;
+      line-height: 140%;
+    }
+
+    &__list {
+
+      &-text {
+        @include typography($fz_12, $fw_400);
+      }
+    }
+
+    &__first {
+      gap: 0;
+
+      &-bottom {
+        margin-top: 26px;
+      }
+
+      &-conditions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+
+    &__last {
+      gap: 0;
+
+      &-middle {
+        margin-top: 14px;
+        gap: 17px;
+      }
+
+      &-bottom {
+        margin-top: 8px;
+      }
+
+    }
+
+    &__arrow {
+
+      &-right {
+        display: inline-block;
+        position: absolute;
+        translate: -10px 30px;
+        top: 0;
+        right: 0;
+      }
+
+      &-left {
+        display: inline-block;
+        position: absolute;
+        translate: 10px 30px;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &__accent {
+      @include typography($fz_12, $fw_600);
+    }
+  }
+
+
+}
+
+.price__show {
+  display: flex;
 }

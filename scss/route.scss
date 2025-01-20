@@ -4,7 +4,6 @@
 
 
 .route {
-  margin-top: 110px;
 
   &__content {
     margin-top: 24px;
@@ -40,5 +39,14 @@
 
   &__image {
     border-radius: 4px;
+  }
+}
+
+
+@media only screen and (max-width: 834px) {
+  .route {
+    &__image {
+      display: none;
+    }
   }
 }

@@ -16,6 +16,9 @@
 @import "./more";
 @import "./footer";
 
+
+
+
 * {
   font-family: "Inter", sans-serif;
   color: $black;
@@ -27,6 +30,21 @@
   margin: 0 auto;
 }
 
+.main {
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.section {
+  padding: 40px 0;
+}
+
+.section__title {
+  @include typography($fz_24, $fw_600)
+}
+
 .progress {
   width: 162px;
   height: 2px;
@@ -35,114 +53,77 @@
   z-index: 1;
 
   &__program {
-    &:after {
-      content: '';
-      z-index: 2;
-      position: absolute;
-      left: 0;
-      width: 18px;
-      height: 2px;
-      background-color: $red;
-    }
+   @include progress_line($red, 1);
   }
 
   &__route {
-    &:after {
-      content: '';
-      z-index: 2;
-      position: absolute;
-      left: 0;
-      width: calc(18px * 2);
-      height: 2px;
-      background-color: $red;
-    }
+    @include progress_line($red, 2);
   }
 
   &__gallery {
-    &:after {
-      content: '';
-      z-index: 2;
-      position: absolute;
-      left: 0;
-      width: calc(18px * 3);
-      height: 2px;
-      background-color: $red;
-    }
+    @include progress_line($red, 3);
   }
 
   &__schedule {
-    &:after {
-      content: '';
-      z-index: 2;
-      position: absolute;
-      left: 0;
-      width: calc(18px * 4);
-      height: 2px;
-      background-color: $red;
-    }
+    @include progress_line($red, 4);
   }
 
   &__price {
-    &:after {
-      content: '';
-      z-index: 2;
-      position: absolute;
-      left: 0;
-      width: calc(18px * 5);
-      height: 2px;
-      background-color: $red;
-    }
+    @include progress_line($red, 5);
   }
 
   &__choice {
-    &:after {
-      content: '';
-      z-index: 2;
-      position: absolute;
-      left: 0;
-      width: calc(18px * 6);
-      height: 2px;
-      background-color: $red;
-    }
+    @include progress_line($red, 6);
   }
 
   &__information {
-    &:after {
-      content: '';
-      z-index: 2;
-      position: absolute;
-      left: 0;
-      width: calc(18px * 7);
-      height: 2px;
-      background-color: $red;
-    }
+    @include progress_line($red, 7);
   }
 
   &__reviews {
-    &:after {
-      content: '';
-      z-index: 2;
-      position: absolute;
-      left: 0;
-      width: calc(18px * 8);
-      height: 2px;
-      background-color: $red;
-    }
+    @include progress_line($red, 8);
   }
 
   &__more {
-    &:after {
-      content: '';
-      z-index: 2;
-      position: absolute;
-      left: 0;
-      width: calc(18px * 9);
-      height: 2px;
-      background-color: $red;
-    }
+    @include progress_line($red, 9);
   }
 }
 
-.section__title {
-  @include typography($fz_24, $fw_600)
+@media only screen and (max-width: 1300px) {
+  .container {
+    @include container(1034px);
+  }
 }
+
+@media only screen and (max-width: 1034px) {
+  .container {
+    @include container(834px);
+  }
+}
+
+@media only screen and (max-width: 834px) {
+  .container {
+    @include container(764px);
+  }
+  .main {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 665px) {
+  .container {
+    @include container(100%);
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+
+  .section {
+    padding: 0;
+  }
+
+  .section__title {
+    text-transform: uppercase;
+    @include typography($fz_16, $fw_600)
+  }
+}
+

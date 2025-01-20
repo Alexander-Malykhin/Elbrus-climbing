@@ -3,8 +3,6 @@
 @import "./settings/fonts";
 
 .more {
-  margin-top: 162px;
-
   &__content {
     margin-top: 12px;
     display: flex;
@@ -247,3 +245,29 @@
 .active__card-level {
   background-color: $gray;
 }
+
+
+@media only screen and (max-width: 1300px) {
+  .more {
+
+    &__button {
+
+      &-slider {
+        display: none;
+      }
+    }
+
+    &__slider {
+      &-list {
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
+

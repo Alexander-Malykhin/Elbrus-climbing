@@ -3,7 +3,6 @@
 @import "./settings/fonts";
 
 .gallery {
-  margin-top: 162px;
 
   &__content {
     display: flex;
@@ -14,7 +13,6 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    grid-template-rows: 280px;
     gap: 8px;
 
     &-item {
@@ -48,4 +46,41 @@
       border-radius: 4px;
     }
   }
+}
+
+@media only screen and (max-width: 1300px) {
+  .gallery {
+
+    &__list {
+      grid-template-columns: repeat(3, auto);
+
+      &-item {
+        height: auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 834px) {
+  .gallery {
+
+    &__list {
+      grid-template-columns: repeat(2, auto);
+
+      &-item {
+        &:first-child {
+          display: none;
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 665px) {
+ .gallery {
+   display: none;
+ }
 }

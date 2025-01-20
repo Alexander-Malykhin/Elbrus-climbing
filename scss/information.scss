@@ -7,8 +7,6 @@
 @import "./settings/fonts";
 
 .information {
-  margin-top: 162px;
-
   &__content {
     margin-top: 24px;
     display: flex;
@@ -92,6 +90,63 @@
 
     &-aсcent {
       color: $main_green;
+    }
+  }
+}
+
+@media only screen and (max-width: 834px) {
+  .container {
+    @include container(764px);
+  }
+  .main {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 665px) {
+  .information {
+
+    &__list {
+      max-width: 100%;
+      gap: 8px;
+
+      &-item {
+        border: none;
+        gap: 16px;
+        border-radius: 2px;
+        padding: 8px 16px;
+        box-shadow: 0 4px 24px 0 rgba($black, 0.06);
+      }
+
+      &-top {
+        display: grid;
+        grid-template-columns: 1fr 17px;
+        align-items: flex-start;
+      }
+
+      &-title {
+        @include typography($fz_16, $fw_600);
+        color: $gray;
+        text-transform: uppercase;
+        max-width: 230px;
+        width: 100%;
+      }
+
+      &-text {
+        @include typography($fz_12, $fw_400);
+      }
+    }
+
+    &__module {
+      margin-top: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-content {
+        padding: 24px;
+        width: 100%;
+      }
     }
   }
 }

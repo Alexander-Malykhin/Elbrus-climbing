@@ -23,7 +23,6 @@
   transition: 0.3s;
 }
 
-
 @mixin hover__main($color) {
   background-color: $color;
   transition: 0.3s ease-in-out;
@@ -34,3 +33,16 @@
   border-color: $color;
   transition: 0.3s ease-in-out;
 }
+
+@mixin progress_line($color, $step) {
+  &:after {
+    content: '';
+    width: calc(18px * $step);
+    height: 2px;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    background-color: $color;
+  }
+}
+
