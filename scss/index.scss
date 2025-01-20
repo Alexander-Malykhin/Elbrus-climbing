@@ -3,6 +3,7 @@
 @import "./settings/colors";
 @import "./settings/fonts";
 @import "./settings/mixins";
+@import "./settings/proccess";
 //SECTIONS
 @import "./header";
 @import "./program";
@@ -15,8 +16,6 @@
 @import "./reviews";
 @import "./more";
 @import "./footer";
-
-
 
 
 * {
@@ -45,49 +44,7 @@
   @include typography($fz_24, $fw_600)
 }
 
-.progress {
-  width: 162px;
-  height: 2px;
-  background-color: rgba($gray, 0.3);
-  position: relative;
-  z-index: 1;
 
-  &__program {
-   @include progress_line($red, 1);
-  }
-
-  &__route {
-    @include progress_line($red, 2);
-  }
-
-  &__gallery {
-    @include progress_line($red, 3);
-  }
-
-  &__schedule {
-    @include progress_line($red, 4);
-  }
-
-  &__price {
-    @include progress_line($red, 5);
-  }
-
-  &__choice {
-    @include progress_line($red, 6);
-  }
-
-  &__information {
-    @include progress_line($red, 7);
-  }
-
-  &__reviews {
-    @include progress_line($red, 8);
-  }
-
-  &__more {
-    @include progress_line($red, 9);
-  }
-}
 
 @media only screen and (max-width: 1300px) {
   .container {
