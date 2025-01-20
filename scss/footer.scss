@@ -153,6 +153,7 @@
 
 
     &__policy-mobile {
+      display: block;
       @include typography($fz_16, $fw_500);
       color: $white;
       opacity: 0.6;
@@ -177,8 +178,9 @@
     }
 
     &__local-mobile {
-      color: $white;
       @include typography($fz_12, $fw_400);
+      display: block;
+      color: $white;
       max-width: 140px;
       text-align: right;
     }

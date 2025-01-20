@@ -22,6 +22,10 @@
     width: 100%;
     gap: 2px;
 
+    &-button {
+      transform: rotate(180deg);
+    }
+
     &-item {
       display: flex;
       flex-direction: column;
@@ -48,6 +52,7 @@
     &-content {
       max-width: 950px;
       width: 100%;
+      display: none;
     }
 
     &-text {
@@ -92,6 +97,11 @@
       color: $main_green;
     }
   }
+}
+
+
+.information__show {
+  display: block;
 }
 
 @media only screen and (max-width: 834px) {

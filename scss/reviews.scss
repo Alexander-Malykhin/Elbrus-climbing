@@ -13,4 +13,52 @@
   &__image {
     margin: 0 auto;
   }
+
+  &__laptop {
+    display: none;
+  }
+
+  &__mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 834px) {
+  .reviews {
+    &__content {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__image {
+      display: none;
+    }
+
+    &__laptop {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 665px) {
+  .reviews {
+    &__content {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__laptop {
+      display: none;
+    }
+
+    &__mobile {
+      display: block;
+      margin: 0 auto;
+    }
+  }
 }
