@@ -38,6 +38,7 @@
       border-radius: 2px;
       gap: 16px;
       padding: 16px 24px;
+      cursor: pointer;
     }
 
     &-title {
@@ -45,6 +46,7 @@
     }
 
     &-text {
+      display: none;
       @include typography($fz_16, $fw_400);
       line-height: 140%;
     }

@@ -118,13 +118,21 @@ body::-webkit-scrollbar {
 }
 
 .header {
-  background-image: url("../images/background_header.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  max-width: 100%;
   height: auto;
   padding: 30px 0 20px 0;
+}
+.header__video {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 580px;
+  top: 0;
+  left: 0;
+}
+.header__video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .header__phone {
   display: flex;
@@ -583,6 +591,9 @@ body::-webkit-scrollbar {
     padding: 0;
     background: none;
   }
+  .header__video {
+    display: none;
+  }
   .header__logo {
     width: 57px;
     height: 26px;
@@ -699,9 +710,12 @@ body::-webkit-scrollbar {
   .header__slider {
     overflow-x: auto;
     display: grid;
-    grid-template-columns: repeat(3, 288px);
+    grid-template-columns: repeat(5, 288px);
     grid-template-rows: 192px;
     gap: 8px;
+  }
+  .header__slider::-webkit-scrollbar {
+    display: none;
   }
   .header__slider-item {
     position: relative;
@@ -723,7 +737,9 @@ body::-webkit-scrollbar {
     width: 16px;
     height: 16px;
   }
-  .header__slider-img {
+  .header__slider-video {
+    object-fit: cover;
+    width: 288px;
     position: relative;
     height: 192px;
     border-radius: 2px;
@@ -812,6 +828,8 @@ body::-webkit-scrollbar {
 .program__list-item {
   font-size: 16px;
   font-weight: 500;
+}
+.program__list-link {
   cursor: pointer;
   color: #7E869A;
 }
@@ -1253,12 +1271,14 @@ body::-webkit-scrollbar {
   border-radius: 2px;
   gap: 16px;
   padding: 16px 24px;
+  cursor: pointer;
 }
 .schedule__list-title {
   font-size: 16px;
   font-weight: 600;
 }
 .schedule__list-text {
+  display: none;
   font-size: 16px;
   font-weight: 400;
   line-height: 140%;
@@ -1778,6 +1798,7 @@ body::-webkit-scrollbar {
   border-bottom: 1px solid rgba(126, 134, 154, 0.2);
   border-radius: 2px;
   padding: 16px 24px;
+  cursor: pointer;
 }
 .information__list-top {
   display: grid;
@@ -2410,13 +2431,21 @@ body::-webkit-scrollbar {
 }
 
 .header {
-  background-image: url("../images/background_header.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  max-width: 100%;
   height: auto;
   padding: 30px 0 20px 0;
+}
+.header__video {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 580px;
+  top: 0;
+  left: 0;
+}
+.header__video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .header__phone {
   display: flex;
@@ -2875,6 +2904,9 @@ body::-webkit-scrollbar {
     padding: 0;
     background: none;
   }
+  .header__video {
+    display: none;
+  }
   .header__logo {
     width: 57px;
     height: 26px;
@@ -2991,9 +3023,12 @@ body::-webkit-scrollbar {
   .header__slider {
     overflow-x: auto;
     display: grid;
-    grid-template-columns: repeat(3, 288px);
+    grid-template-columns: repeat(5, 288px);
     grid-template-rows: 192px;
     gap: 8px;
+  }
+  .header__slider::-webkit-scrollbar {
+    display: none;
   }
   .header__slider-item {
     position: relative;
@@ -3015,7 +3050,9 @@ body::-webkit-scrollbar {
     width: 16px;
     height: 16px;
   }
-  .header__slider-img {
+  .header__slider-video {
+    object-fit: cover;
+    width: 288px;
     position: relative;
     height: 192px;
     border-radius: 2px;
@@ -3104,6 +3141,8 @@ body::-webkit-scrollbar {
 .program__list-item {
   font-size: 16px;
   font-weight: 500;
+}
+.program__list-link {
   cursor: pointer;
   color: #7E869A;
 }
@@ -3545,12 +3584,14 @@ body::-webkit-scrollbar {
   border-radius: 2px;
   gap: 16px;
   padding: 16px 24px;
+  cursor: pointer;
 }
 .schedule__list-title {
   font-size: 16px;
   font-weight: 600;
 }
 .schedule__list-text {
+  display: none;
   font-size: 16px;
   font-weight: 400;
   line-height: 140%;
@@ -4070,6 +4111,7 @@ body::-webkit-scrollbar {
   border-bottom: 1px solid rgba(126, 134, 154, 0.2);
   border-radius: 2px;
   padding: 16px 24px;
+  cursor: pointer;
 }
 .information__list-top {
   display: grid;

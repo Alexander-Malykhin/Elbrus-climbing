@@ -94,6 +94,9 @@
 
     &-item {
       @include typography($fz_16, $fw_500);
+    }
+
+    &-link {
       cursor: pointer;
       color: $gray;
     }

@@ -13,7 +13,14 @@
 <body>
     <!--HEADER-->
     <header class="header">
-    <div class="container">
+        <!--HEADER__BACKGROUND-->
+        <div class="header__video">
+            <video muted loop poster="./images/background_header.png" id="video">
+                <source src="https://assets.mixkit.co/videos/4283/4283-720.mp4" type='video/mp4'>
+            </video>
+        </div>
+
+        <div class="container">
         <div class="header__content">
             <div class="header__content-top">
                 <div class="header__logo">
@@ -96,7 +103,7 @@
                     <h1 class="header__information-title">Тур в Непал: Трек вокруг Аннапурны и озеро Тиличо, Гималаи</h1>
 
                     <button class="header__information-button">
-                        <img src="./images/triangle.png" alt="button">
+                        <img src="./images/triangle.png" alt="button" id="btn">
                     </button>
                 </div>
 
@@ -115,19 +122,46 @@
 
             <div class="header__slider">
                 <div class="header__slider-item">
-                    <img src="./images/background_header.png" alt="" class="header__slider-img">
+                    <video muted loop poster="./images/background_header.png" class="header__slider-video">
+                        <source src="https://assets.mixkit.co/videos/4283/4283-720.mp4" type='video/mp4'>
+                    </video>
+
+                    <button class="header__slider-button">
+                        <img src="./images/triangle.png" alt="button" class="header__slider-videoangle">
+                    </button>
+                </div>
+                <div class="header__slider-item">
+                    <video muted loop poster="./images/background_header.png" class="header__slider-video">
+                        <source src="https://assets.mixkit.co/videos/4283/4283-720.mp4" type='video/mp4'>
+                    </video>
+
                     <button class="header__slider-button">
                         <img src="./images/triangle.png" alt="button" class="header__slider-angle">
                     </button>
                 </div>
                 <div class="header__slider-item">
-                    <img src="./images/background_header.png" alt="" class="header__slider-img">
+                    <video muted loop poster="./images/background_header.png" class="header__slider-video">
+                        <source src="https://assets.mixkit.co/videos/4283/4283-720.mp4" type='video/mp4'>
+                    </video>
+
                     <button class="header__slider-button">
                         <img src="./images/triangle.png" alt="button" class="header__slider-angle">
                     </button>
                 </div>
                 <div class="header__slider-item">
-                    <img src="./images/background_header.png" alt="" class="header__slider-img">
+                    <video muted loop poster="./images/background_header.png" class="header__slider-video">
+                        <source src="https://assets.mixkit.co/videos/4283/4283-720.mp4" type='video/mp4'>
+                    </video>
+
+                    <button class="header__slider-button">
+                        <img src="./images/triangle.png" alt="button" class="header__slider-angle">
+                    </button>
+                </div>
+                <div class="header__slider-item">
+                    <video muted loop poster="./images/background_header.png" class="header__slider-video">
+                        <source src="https://assets.mixkit.co/videos/4283/4283-720.mp4" type='video/mp4'>
+                    </video>
+
                     <button class="header__slider-button">
                         <img src="./images/triangle.png" alt="button" class="header__slider-angle">
                     </button>
@@ -215,8 +249,8 @@
         </div>
     </div>
 
-    <!--MOBILE MENU -->
-    <div class="menu">
+        <!--MOBILE MENU -->
+        <div class="menu">
         <div class="menu__background"></div>
         <div class="menu__aside">
             <div class="menu__column">
@@ -275,22 +309,22 @@
             </div>
         </div>
     </div>
-</header>
+    </header>
     <!--MAIN-->
     <main class="main">
         <!--SECTION PROGRAM-->
-        <section class="program">
+        <section id="program" class="program">h
             <div class="program__background-mobile">
                 <div class="container">
                     <div class="program__middle">
                         <nav>
                             <ul class="program__list">
-                                <li class="program__list-item program__active">Описание</li>
-                                <li class="program__list-item">Фото</li>
-                                <li class="program__list-item">Программа</li>
-                                <li class="program__list-item">Стоимость</li>
-                                <li class="program__list-item">Заезды</li>
-                                <li class="program__list-item">Информация</li>
+                                <li class="program__list-item"><a class="program__list-link program__active" href="#schedule">Описание</a></li>
+                                <li class="program__list-item"><a class="program__list-link" href="#gallery">Фото</a></li>
+                                <li class="program__list-item"><a class="program__list-link" href="#program">Программа</a></li>
+                                <li class="program__list-item"><a class="program__list-link" href="#price">Стоимость</a></li>
+                                <li class="program__list-item"><a class="program__list-link" href="#choice">Заезды</a></li>
+                                <li class="program__list-item"><a class="program__list-link" href="#information">Информация</a></li>
                             </ul>
                         </nav>
 
@@ -387,12 +421,12 @@
                     <div class="program__middle">
                         <nav>
                             <ul class="program__list">
-                                <li class="program__list-item program__active">Описание</li>
-                                <li class="program__list-item">Фото</li>
-                                <li class="program__list-item">Программа</li>
-                                <li class="program__list-item">Стоимость</li>
-                                <li class="program__list-item">Заезды</li>
-                                <li class="program__list-item">Информация</li>
+                                <li class="program__list-item"><a class="program__list-link program__active" href="#schedule">Описание</a></li>
+                                <li class="program__list-item"><a class="program__list-link" href="#gallery">Фото</a></li>
+                                <li class="program__list-item"><a class="program__list-link" href="#program">Программа</a></li>
+                                <li class="program__list-item"><a class="program__list-link" href="#price">Стоимость</a></li>
+                                <li class="program__list-item"><a class="program__list-link" href="#choice">Заезды</a></li>
+                                <li class="program__list-item"><a class="program__list-link" href="#information">Информация</a></li>
                             </ul>
                         </nav>
 
@@ -530,7 +564,7 @@
             </div>
         </section>
         <!--SECTION GALLERY-->
-        <section class="gallery section">
+        <section id="gallery" class="gallery section">
             <div class="container">
                 <div class="gallery__content">
                     <div class="progress progress__gallery"></div>
@@ -563,7 +597,7 @@
             </div>
         </section>
         <!--SECTION SCHEDULE-->
-        <section class="schedule section">
+        <section id="schedule" class="schedule section">
             <div class="container">
                 <div class="schedule__content">
                     <div class="progress progress__schedule"></div>
@@ -586,6 +620,7 @@
 
                             <div class="schedule__list-content">
                                 <p class="schedule__list-title">Переезд к точке начала трека - Чамдже</p>
+
                                 <p class="schedule__list-text">
                                     Вам необходимо прилететь в Катманду не позднее, чем в 9:00 накануне начала нашего тура,
                                     чтобы успеть оформить TIMS и пермит (это необходимо делать в вашем присутствии).
@@ -596,7 +631,7 @@
                             </div>
 
                             <button class="schedule__button-item">
-                                <img src="./images/triangle_up.png" alt="arrow">
+                                <img src="./images/triangle_down.png" alt="arrow">
                             </button>
                         </div>
 
@@ -607,6 +642,14 @@
 
                             <div class="schedule__list-content">
                                 <p class="schedule__list-title">Первый ходовой день: из Чамдже в Дхарапани</p>
+
+                                <p class="schedule__list-text">
+                                    Вам необходимо прилететь в Катманду не позднее, чем в 9:00 накануне начала нашего тура,
+                                    чтобы успеть оформить TIMS и пермит (это необходимо делать в вашем присутствии).
+                                    Но ещё лучше — прилететь за 2 дня до начала тура. Так вы сможете отдохнуть после дороги
+                                    и начать осмотр города. В любом случае мы встретим вас в назначенное время на выходе
+                                    из аэропорта Катманду (KTM) и отвезём в отель.
+                                </p>
                             </div>
 
                             <button class="schedule__button-item">
@@ -621,6 +664,14 @@
 
                             <div class="schedule__list-content">
                                 <p class="schedule__list-title">Первый ходовой день: из Чамдже в Дхарапани</p>
+
+                                <p class="schedule__list-text">
+                                    Вам необходимо прилететь в Катманду не позднее, чем в 9:00 накануне начала нашего тура,
+                                    чтобы успеть оформить TIMS и пермит (это необходимо делать в вашем присутствии).
+                                    Но ещё лучше — прилететь за 2 дня до начала тура. Так вы сможете отдохнуть после дороги
+                                    и начать осмотр города. В любом случае мы встретим вас в назначенное время на выходе
+                                    из аэропорта Катманду (KTM) и отвезём в отель.
+                                </p>
                             </div>
 
                             <button class="schedule__button-item">
@@ -635,6 +686,14 @@
 
                             <div class="schedule__list-content">
                                 <p class="schedule__list-title">Первый ходовой день: из Чамдже в Дхарапани</p>
+
+                                <p class="schedule__list-text">
+                                    Вам необходимо прилететь в Катманду не позднее, чем в 9:00 накануне начала нашего тура,
+                                    чтобы успеть оформить TIMS и пермит (это необходимо делать в вашем присутствии).
+                                    Но ещё лучше — прилететь за 2 дня до начала тура. Так вы сможете отдохнуть после дороги
+                                    и начать осмотр города. В любом случае мы встретим вас в назначенное время на выходе
+                                    из аэропорта Катманду (KTM) и отвезём в отель.
+                                </p>
                             </div>
 
                             <button class="schedule__button-item">
@@ -649,6 +708,14 @@
 
                             <div class="schedule__list-content">
                                 <p class="schedule__list-title">Первый ходовой день: из Чамдже в Дхарапани</p>
+
+                                <p class="schedule__list-text">
+                                    Вам необходимо прилететь в Катманду не позднее, чем в 9:00 накануне начала нашего тура,
+                                    чтобы успеть оформить TIMS и пермит (это необходимо делать в вашем присутствии).
+                                    Но ещё лучше — прилететь за 2 дня до начала тура. Так вы сможете отдохнуть после дороги
+                                    и начать осмотр города. В любом случае мы встретим вас в назначенное время на выходе
+                                    из аэропорта Катманду (KTM) и отвезём в отель.
+                                </p>
                             </div>
 
                             <button class="schedule__button-item">
@@ -663,6 +730,14 @@
 
                             <div class="schedule__list-content">
                                 <p class="schedule__list-title">Первый ходовой день: из Чамдже в Дхарапани</p>
+
+                                <p class="schedule__list-text">
+                                    Вам необходимо прилететь в Катманду не позднее, чем в 9:00 накануне начала нашего тура,
+                                    чтобы успеть оформить TIMS и пермит (это необходимо делать в вашем присутствии).
+                                    Но ещё лучше — прилететь за 2 дня до начала тура. Так вы сможете отдохнуть после дороги
+                                    и начать осмотр города. В любом случае мы встретим вас в назначенное время на выходе
+                                    из аэропорта Катманду (KTM) и отвезём в отель.
+                                </p>
                             </div>
 
                             <button class="schedule__button-item">
@@ -694,9 +769,9 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section  >
         <!--SECTION PRICE-->
-        <section class="price section">
+        <section id="price" class="price section">
             <div class="container">
                 <div class="progress progress__price"></div>
 
@@ -916,7 +991,7 @@
             </div>
         </section>
         <!--SECTION CHOICE-->
-        <section class="choice section">
+        <section id="choice" class="choice section">
             <div class="container">
                 <div class="progress progress__choice"></div>
 
@@ -1025,7 +1100,7 @@
             </div>
         </section>
         <!--SECTION INFORMATION-->
-        <section class="information section">
+        <section id="information" class="information section">
             <div class="container">
                 <div class="progress progress__information"></div>
                 <div class="information__content">
