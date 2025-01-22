@@ -1317,7 +1317,7 @@ body::-webkit-scrollbar {
   }
   .gallery__slider-list {
     max-width: 70vw;
-    height: 70vh;
+    height: 85vh;
   }
   .gallery__slider-item {
     max-width: 70vw;
@@ -3828,7 +3828,7 @@ body::-webkit-scrollbar {
   }
   .gallery__slider-list {
     max-width: 70vw;
-    height: 70vh;
+    height: 85vh;
   }
   .gallery__slider-item {
     max-width: 70vw;
