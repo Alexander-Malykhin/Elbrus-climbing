@@ -15,6 +15,7 @@ const SCHEDULE_ITEMS = document.querySelectorAll('.schedule__list-item')
 const SCHEDULE_CONTENT = document.querySelectorAll('.schedule__list-text')
 const SCHEDULE_BUTTON = document.querySelector('.schedule__button-list')
 
+
 const videoBackground = () => {
     const VIDEO = document.querySelector('#video')
     const BUTTON_VIDEO = document.querySelector('.header__information-button')
@@ -106,6 +107,25 @@ const sliderGallery = () => {
 };
 
 sliderGallery();
+
+const sliderGalleryMobile = () => {
+    const GALLEY = document.querySelector('.gallery__mobile')
+    const BUTTON = document.querySelector('.program__button-photo')
+    const CLOSE = document.querySelector('.gallery__mobile-close')
+
+    BUTTON.addEventListener('click', () => {
+        GALLEY.classList.add('gallery__mobile-show')
+        document.body.style.overflow = 'hidden'
+    })
+
+    CLOSE.addEventListener('click', () => {
+        GALLEY.classList.remove('gallery__mobile-show')
+        document.body.style.overflow = ''
+    })
+
+}
+
+sliderGalleryMobile()
 
 const buttonOrderClick = (button) => {
     button.addEventListener('mousedown', () => {
@@ -206,3 +226,4 @@ SCHEDULE_BUTTON.addEventListener('click', () => {
             break;
     }
 })
+
