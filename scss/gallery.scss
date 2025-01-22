@@ -182,6 +182,16 @@
         }
       }
     }
+
+    &__slider {
+      &-list {
+        max-width: 440px;
+      }
+
+      &-item {
+        height: 300px;
+      }
+    }
   }
 }
 

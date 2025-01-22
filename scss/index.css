@@ -1323,6 +1323,12 @@ body::-webkit-scrollbar {
   .gallery__list-item:nth-child(2) {
     display: none;
   }
+  .gallery__slider-list {
+    max-width: 440px;
+  }
+  .gallery__slider-item {
+    height: 300px;
+  }
 }
 @media only screen and (max-width: 665px) {
   .gallery {
@@ -3724,6 +3730,12 @@ body::-webkit-scrollbar {
   }
   .gallery__list-item:nth-child(2) {
     display: none;
+  }
+  .gallery__slider-list {
+    max-width: 440px;
+  }
+  .gallery__slider-item {
+    height: 300px;
   }
 }
 @media only screen and (max-width: 665px) {
