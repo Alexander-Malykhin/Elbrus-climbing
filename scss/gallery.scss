@@ -166,11 +166,13 @@
 
     &__slider {
       &-list {
-        max-width: 440px;
+        max-width: 70vw;
+        height: 60vh;
       }
 
       &-item {
-        height: 300px;
+        max-width: 70vw;
+        height: 60vh;
       }
     }
   }
