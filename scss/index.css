@@ -1518,8 +1518,13 @@ body::-webkit-scrollbar {
   .schedule__mobile {
     margin-top: 16px;
   }
+  .schedule__mobile-hidden {
+    overflow: hidden;
+  }
   .schedule__mobile-list {
-    display: inline-block;
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    transition: transform 0.5s ease-in-out;
   }
   .schedule__mobile-item {
     display: flex;
@@ -1533,7 +1538,7 @@ body::-webkit-scrollbar {
     justify-content: space-between;
   }
   .schedule__mobile-title {
-    max-width: 240px;
+    max-width: 195px;
     font-size: 16px;
     font-weight: 600;
   }
@@ -1748,13 +1753,15 @@ body::-webkit-scrollbar {
   .price__cards {
     grid-template-columns: repeat(2, 288px);
     justify-content: flex-start;
+    transition: transform 0.5s ease-in-out;
   }
   .price__lists {
-    margin-top: 30px;
+    margin: 10px 0;
+    gap: 0;
   }
   .price__lists-header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
   .price__lists-button {
     display: block;
@@ -1764,6 +1771,7 @@ body::-webkit-scrollbar {
     max-width: 100%;
     box-shadow: 0 4px 24px 0 rgba(34, 34, 34, 0.06);
     padding: 8px 16px;
+    gap: 16px;
   }
   .price__lists-top {
     display: flex;
@@ -2164,16 +2172,28 @@ body::-webkit-scrollbar {
   justify-content: space-between;
 }
 .more__slider {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  justify-content: center;
 }
 .more__slider-list {
+  padding: 20px 5px;
+  max-width: 1200px;
   display: grid;
   grid-template-columns: repeat(4, 288px);
-  grid-template-rows: 390px;
   gap: 8px;
+  transition: transform 0.5s ease;
+}
+.more__slider-container {
+  position: relative;
+  overflow: hidden;
+}
+.more__slider-buttons {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 .more__card {
   display: flex;
@@ -2374,6 +2394,7 @@ body::-webkit-scrollbar {
     display: none;
   }
   .more__slider-list {
+    padding: 20px;
     overflow-x: auto;
   }
   .more__slider-list::-webkit-scrollbar {
@@ -4029,8 +4050,13 @@ body::-webkit-scrollbar {
   .schedule__mobile {
     margin-top: 16px;
   }
+  .schedule__mobile-hidden {
+    overflow: hidden;
+  }
   .schedule__mobile-list {
-    display: inline-block;
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    transition: transform 0.5s ease-in-out;
   }
   .schedule__mobile-item {
     display: flex;
@@ -4044,7 +4070,7 @@ body::-webkit-scrollbar {
     justify-content: space-between;
   }
   .schedule__mobile-title {
-    max-width: 240px;
+    max-width: 195px;
     font-size: 16px;
     font-weight: 600;
   }
@@ -4259,13 +4285,15 @@ body::-webkit-scrollbar {
   .price__cards {
     grid-template-columns: repeat(2, 288px);
     justify-content: flex-start;
+    transition: transform 0.5s ease-in-out;
   }
   .price__lists {
-    margin-top: 30px;
+    margin: 10px 0;
+    gap: 0;
   }
   .price__lists-header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
   .price__lists-button {
     display: block;
@@ -4275,6 +4303,7 @@ body::-webkit-scrollbar {
     max-width: 100%;
     box-shadow: 0 4px 24px 0 rgba(34, 34, 34, 0.06);
     padding: 8px 16px;
+    gap: 16px;
   }
   .price__lists-top {
     display: flex;
@@ -4675,16 +4704,28 @@ body::-webkit-scrollbar {
   justify-content: space-between;
 }
 .more__slider {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  justify-content: center;
 }
 .more__slider-list {
+  padding: 20px 5px;
+  max-width: 1200px;
   display: grid;
   grid-template-columns: repeat(4, 288px);
-  grid-template-rows: 390px;
   gap: 8px;
+  transition: transform 0.5s ease;
+}
+.more__slider-container {
+  position: relative;
+  overflow: hidden;
+}
+.more__slider-buttons {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 .more__card {
   display: flex;
@@ -4885,6 +4926,7 @@ body::-webkit-scrollbar {
     display: none;
   }
   .more__slider-list {
+    padding: 20px;
     overflow-x: auto;
   }
   .more__slider-list::-webkit-scrollbar {

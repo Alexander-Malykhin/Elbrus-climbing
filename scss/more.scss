@@ -17,16 +17,30 @@
   }
 
   &__slider {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 12px;
+    justify-content: center;
 
     &-list {
+      padding: 20px 5px;
+      max-width: 1200px;
       display: grid;
       grid-template-columns: repeat(4, 288px);
-      grid-template-rows: 390px;
       gap: 8px;
+      transition: transform 0.5s ease;
+    }
+
+    &-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    &-buttons {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
     }
   }
 
@@ -259,6 +273,7 @@
 
     &__slider {
       &-list {
+        padding: 20px;
         overflow-x: auto;
 
         &::-webkit-scrollbar {
@@ -270,4 +285,6 @@
 }
 
 
+.a {
 
+}

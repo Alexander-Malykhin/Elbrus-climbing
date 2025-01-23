@@ -243,14 +243,16 @@
     &__cards {
       grid-template-columns: repeat(2, 288px);
       justify-content: flex-start;
+      transition: transform 0.5s ease-in-out;
     }
 
     &__lists {
-      margin-top: 30px;
+      margin: 10px 0;
+      gap: 0;
 
       &-header {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
       }
 
       &-button {
@@ -262,6 +264,7 @@
         max-width: 100%;
         box-shadow: 0 4px 24px 0 rgba($black, 0.06);
         padding: 8px 16px;
+        gap: 16px;
       }
 
       &-top {

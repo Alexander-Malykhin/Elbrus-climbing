@@ -127,6 +127,37 @@ const sliderGalleryMobile = () => {
 
 sliderGalleryMobile()
 
+
+const sliderMore = () => {
+    const carousel = document.querySelector('.more__slider-list')
+    const nextButton = document.querySelector('.next')
+    const prevButton = document.querySelector('.prev')
+
+    nextButton.addEventListener('click', () => {
+        const firstCard = carousel.children[0]
+        carousel.appendChild(firstCard)
+        carousel.style.transition = 'none'
+        carousel.style.transform = 'translateX(-288px)'
+        setTimeout(() => {
+            carousel.style.transition = 'transform 0.3s ease-in-out'
+            carousel.style.transform = 'translateX(0)'
+        }, 50)
+    })
+
+    prevButton.addEventListener('click', () => {
+        const lastCard = carousel.children[carousel.children.length - 1]
+        carousel.insertBefore(lastCard, carousel.children[0])
+        carousel.style.transition = 'none'
+        carousel.style.transform = 'translateX(-288px)'
+        setTimeout(() => {
+            carousel.style.transition = 'transform 0.3s ease-in-out'
+            carousel.style.transform = 'translateX(0)'
+        }, 50)
+    })
+}
+
+sliderMore()
+
 const buttonOrderClick = (button) => {
     button.addEventListener('mousedown', () => {
         button.style.opacity = '0.7';
@@ -227,3 +258,75 @@ SCHEDULE_BUTTON.addEventListener('click', () => {
     }
 })
 
+
+const priceSlider = () => {
+    const BUTTON_RIGHT = document.querySelector('#right')
+    const BUTTON_LEFT = document.querySelector('#left')
+    const CARD = document.querySelector('.card')
+    const CARD__LIST = document.querySelector('.price__cards')
+
+
+    let offset = CARD.clientWidth + 20
+
+    BUTTON_RIGHT.addEventListener('click', () => {
+        CARD__LIST.style.transform = `translateX(-${offset}px`;
+    });
+
+    BUTTON_LEFT.addEventListener('click', () => {
+        CARD__LIST.style.transform = `translateX(0px)`;
+    });
+}
+
+priceSlider()
+
+const priceList = () => {
+    const BUTTON_PRICE = document.querySelectorAll('.price__lists-button')
+    const PRICE_LIST = document.querySelectorAll('.price__lists-item')
+
+    BUTTON_PRICE[0].addEventListener('click', () => {
+        BUTTON_PRICE[0].classList.toggle('information__list-button')
+        return PRICE_LIST[0].classList.toggle('price__show')
+    })
+
+    BUTTON_PRICE[1].addEventListener('click', () => {
+        BUTTON_PRICE[1].classList.toggle('information__list-button')
+        return PRICE_LIST[1].classList.toggle('price__show')
+    })
+}
+
+priceList()
+
+
+const scheduleSlider = () => {
+    const SLIDERS = document.querySelectorAll('.schedule__mobile-item')
+    const BUTTON_LEFT = document.querySelectorAll('.schedule__left')
+    const BUTTON_RIGHT = document.querySelectorAll('.schedule__right')
+    const BUTTON = document.querySelector('.schedule__mobile-list')
+
+    let offset = SLIDERS[0].clientWidth
+    let count = 0
+
+    console.log(SLIDERS.length)
+
+    BUTTON_RIGHT.forEach((element, index) => {
+        BUTTON_RIGHT[index].addEventListener('click', () => {
+            count++
+            if (count !== SLIDERS.length) {
+                BUTTON.style.transform = `translateX(-${offset * count}px`;
+            } else {
+                count = 0
+                BUTTON.style.transform = `translateX(0px)`
+            }
+        })
+    })
+
+    BUTTON_LEFT.forEach((element, index) => {
+        BUTTON_LEFT[index].addEventListener('click', () => {
+            count--
+            BUTTON.style.transform = `translateX(${offset * count}px`;
+        })
+    })
+
+}
+
+scheduleSlider()

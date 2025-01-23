@@ -93,8 +93,14 @@
     &__mobile {
       margin-top: 16px;
 
+      &-hidden {
+        overflow: hidden;
+      }
+
       &-list {
-        display: inline-block;
+        display: grid;
+        grid-template-columns: repeat(3, 100%);
+        transition: transform 0.5s ease-in-out;
       }
 
       &-item {
@@ -111,7 +117,7 @@
       }
 
       &-title {
-        max-width: 240px;
+        max-width: 195px;
         @include typography($fz_16, $fw_600);
       }
 
