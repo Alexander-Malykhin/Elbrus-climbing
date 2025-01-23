@@ -586,7 +586,7 @@ body::-webkit-scrollbar {
     display: block;
   }
 }
-@media only screen and (max-width: 665px) {
+@media only screen and (max-width: 576px) {
   .header {
     padding: 0;
     background: none;
@@ -1064,7 +1064,7 @@ body::-webkit-scrollbar {
     display: block;
   }
 }
-@media only screen and (max-width: 665px) {
+@media only screen and (max-width: 576px) {
   .program__top {
     flex-direction: column;
   }
@@ -1335,7 +1335,7 @@ body::-webkit-scrollbar {
     display: none;
   }
 }
-@media only screen and (max-width: 665px) {
+@media only screen and (max-width: 576px) {
   .gallery {
     display: none;
   }
@@ -1508,7 +1508,7 @@ body::-webkit-scrollbar {
   color: #7E869A;
 }
 
-@media only screen and (max-width: 665px) {
+@media only screen and (max-width: 576px) {
   .schedule {
     margin-top: 0;
   }
@@ -1746,7 +1746,7 @@ body::-webkit-scrollbar {
     grid-template-columns: repeat(2, auto);
   }
 }
-@media only screen and (max-width: 665px) {
+@media only screen and (max-width: 576px) {
   .price__content {
     overflow: hidden;
   }
@@ -2074,7 +2074,7 @@ body::-webkit-scrollbar {
     margin-top: 0;
   }
 }
-@media only screen and (max-width: 665px) {
+@media only screen and (max-width: 576px) {
   .information__list {
     max-width: 100%;
     gap: 8px;
@@ -2145,7 +2145,7 @@ body::-webkit-scrollbar {
     margin: 0 auto;
   }
 }
-@media only screen and (max-width: 665px) {
+@media only screen and (max-width: 576px) {
   .reviews__content {
     margin-top: 24px;
     display: flex;
@@ -2493,7 +2493,7 @@ body::-webkit-scrollbar {
   gap: 20px;
 }
 
-@media only screen and (max-width: 665px) {
+@media only screen and (max-width: 576px) {
   .footer {
     margin-top: 20px;
   }
@@ -3118,7 +3118,7 @@ body::-webkit-scrollbar {
     display: block;
   }
 }
-@media only screen and (max-width: 665px) {
+@media only screen and (max-width: 576px) {
   .header {
     padding: 0;
     background: none;
@@ -3596,7 +3596,7 @@ body::-webkit-scrollbar {
     display: block;
   }
 }
-@media only screen and (max-width: 665px) {
+@media only screen and (max-width: 576px) {
   .program__top {
     flex-direction: column;
   }
@@ -3867,7 +3867,7 @@ body::-webkit-scrollbar {
     display: none;
   }
 }
-@media only screen and (max-width: 665px) {
+@media only screen and (max-width: 576px) {
   .gallery {
     display: none;
   }
@@ -4040,7 +4040,7 @@ body::-webkit-scrollbar {
   color: #7E869A;
 }
 
-@media only screen and (max-width: 665px) {
+@media only screen and (max-width: 576px) {
   .schedule {
     margin-top: 0;
   }
@@ -4278,7 +4278,7 @@ body::-webkit-scrollbar {
     grid-template-columns: repeat(2, auto);
   }
 }
-@media only screen and (max-width: 665px) {
+@media only screen and (max-width: 576px) {
   .price__content {
     overflow: hidden;
   }
@@ -4606,7 +4606,7 @@ body::-webkit-scrollbar {
     margin-top: 0;
   }
 }
-@media only screen and (max-width: 665px) {
+@media only screen and (max-width: 576px) {
   .information__list {
     max-width: 100%;
     gap: 8px;
@@ -4677,7 +4677,7 @@ body::-webkit-scrollbar {
     margin: 0 auto;
   }
 }
-@media only screen and (max-width: 665px) {
+@media only screen and (max-width: 576px) {
   .reviews__content {
     margin-top: 24px;
     display: flex;
@@ -5025,7 +5025,7 @@ body::-webkit-scrollbar {
   gap: 20px;
 }
 
-@media only screen and (max-width: 665px) {
+@media only screen and (max-width: 576px) {
   .footer {
     margin-top: 20px;
   }
@@ -5137,7 +5137,7 @@ body::-webkit-scrollbar {
     margin-top: 0;
   }
 }
-@media only screen and (max-width: 665px) {
+@media only screen and (max-width: 576px) {
   .container {
     max-width: 100%;
     padding: 0 16px;

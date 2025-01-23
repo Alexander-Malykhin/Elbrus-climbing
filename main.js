@@ -306,7 +306,6 @@ const scheduleSlider = () => {
     let offset = SLIDERS[0].clientWidth
     let count = 0
 
-    console.log(SLIDERS.length)
 
     BUTTON_RIGHT.forEach((element, index) => {
         BUTTON_RIGHT[index].addEventListener('click', () => {
@@ -323,7 +322,7 @@ const scheduleSlider = () => {
     BUTTON_LEFT.forEach((element, index) => {
         BUTTON_LEFT[index].addEventListener('click', () => {
             count--
-            BUTTON.style.transform = `translateX(${offset * count}px`;
+            BUTTON.style.transform = `translateX(-${offset * count}px`;
         })
     })
 
