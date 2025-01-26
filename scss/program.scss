@@ -4,41 +4,44 @@
 
 .program {
 
-  &__top {
-    margin: 24px 0 33px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 60px;
-  }
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 62px 400px;
+    grid-template-rows: 1px 24px 255px 33px 64px 43px 210px;
+    grid-template-areas:  "program_progress . ."
+                          ". . ."
+                          "program_infrormation . program_way"
+                          ". . ."
+                          "program_middle program_middle program_middle"
+                          ". . ."
+                          "program_bottom program_bottom program_bottom";
 
-  &__middle {
-    padding: 13px 0;
-    display: flex;
-    gap: 10px;
-    justify-content: space-between;
-    align-items: center;
-  }
+    &-information {
+      grid-area: program_infrormation;
+    }
 
-  &__bottom {
-    margin-top: 43px;
-  }
+    &-way {
+      grid-area: program_way;
+    }
 
-  &__price {
-    display: none;
-  }
+    &-middle {
+      grid-area: program_middle;
+      padding: 13px 0;
+      background-color: $gray_light;
+      border-bottom: 1px solid rgba($gray, 0.2);
+      position: relative;
+    }
 
-  &__buttons {
-    display: none;
+    &-bottom {
+      grid-area: program_bottom;
+    }
   }
 
   &__information {
-    display: flex;
-    width: 100%;
-    max-width: 820px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 62px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: minmax(288px, 820px);
+    gap: 16px;
 
     &-top {
       width: 100%;
@@ -52,20 +55,29 @@
       @include typography($fz_16, $fw_400);
       line-height: 140%;
     }
+
+    &-download {
+      max-width: max-content;
+      @include typography($fz_16, $fw_500);
+      @include button__secondary(8px, 17.5px, $main_green, $main_green, 4px);
+
+      &:hover {
+        @include hover__secondary($hover_green)
+      }
+    }
   }
 
   &__way {
-    height: 170px;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: minmax(288px, 400px);
+    display: grid;
+    grid-template-rows: auto auto;
     gap: 16px;
+    height: 175px;
     padding: 24px;
     background-color: $gray_light;
 
 
     &-text {
-      line-height: 140%;
       @include typography($fz_16, $fw_400);
     }
 
@@ -75,64 +87,48 @@
     }
   }
 
-  &__background {
-
-    &-desktop {
-      background-color: $gray_light;
-      border-bottom: 1px solid rgba($gray, 0.2);
-    }
-
-    &-mobile {
-      display: none;
-    }
+  &__menu {
+    display: grid;
+    grid-template-columns: 570px 1fr max-content 40px max-content;
+    grid-template-areas: "program_navigation . program_text . program_button";
+    align-items: center;
   }
 
   &__list {
+    grid-area: program_navigation;
     display: flex;
-    align-items: center;
-    gap: 24px;
-
-    &-item {
-      @include typography($fz_16, $fw_500);
-    }
+    justify-content: space-between;
 
     &-link {
+      @include typography($fz_16, $fw_500);
       cursor: pointer;
       color: $gray;
     }
   }
 
-  &__active {
-    color: $black;
+  &__text {
+    grid-area: program_text;
+    @include typography($fz_16, $fw_600);
+    color: $gray;
   }
 
-  &__panel {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+  &__button {
+    grid-area: program_button;
+    @include typography($fz_16, $fw_500);
+    @include button__main(7.5px, 25.5px, $main_green, $white, 4px);
 
-    &-text {
-      @include typography($fz_16, $fw_600);
-      color: $gray;
-    }
-
-    &-color {
-      color: $main_green;
+    &:hover {
+      @include hover__main($hover_green)
     }
   }
 
   &__conditions {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 300px));
     justify-content: space-between;
-    align-items: flex-start;
-    gap: 10px;
-
-    &-information {
-      display: none;
-    }
+    gap: 15px;
 
     &-item {
-      max-width: 300px;
       height: auto;
       display: flex;
       flex-direction: column;
@@ -140,36 +136,22 @@
       gap: 8px;
     }
 
-    &-img {
+    &-image {
       width: 30px;
       height: auto;
     }
 
     &-level {
-      padding-top: 10px;
-      display: flex;
-      align-items: flex-end;
-      gap: 3px;
+      @include level__list(10px, 0, 0, 0, 3px);
     }
 
     &-column {
-      height: 20px;
-      width: 8px;
-      border: 1px solid $gray;
-      border-radius: 1.1px;
-
-      &:first-child {
-        height: 8px;
-      }
-
-      &:nth-child(2) {
-        height: 15px;
-      }
+      @include level__column(20px, 8px, $gray, 1px, 1.1px, 8px, 12px);
     }
 
     &-title {
-      margin-top: 8px;
       @include typography($fz_16, $fw_600);
+      margin-top: 8px;
       color: $gray;
       text-transform: uppercase;
     }
@@ -179,37 +161,7 @@
       @include typography($fz_16, $fw_400);
     }
 
-    &-mobile {
-      display: none;
-    }
-  }
-
-  &__button {
-    &-favorites {
-      display: inline-block;
-      @include typography($fz_16, $fw_500);
-      color: $main_green;
-    }
-
-    &-download {
-      @include typography($fz_16, $fw_500);
-      @include button__secondary(7.5px, 17.5px, $main_green, $main_green, 4px);
-
-      &:hover {
-        @include hover__secondary($hover_green)
-      }
-    }
-
-    &-order {
-      @include typography($fz_16, $fw_500);
-      @include button__main(7.5px, 25.5px, $main_green, $white, 4px);
-
-      &:hover {
-        @include hover__main($hover_green)
-      }
-    }
-
-    &-photo {
+    &-button {
       margin-top: 24px;
       @include typography($fz_16, $fw_500);
       @include button__secondary(7.5px, 25.5px, $main_green, $main_green, 4px);
@@ -219,81 +171,121 @@
       }
     }
 
+
     &-mobile {
+      display: none;
+    }
+
+    &-information {
+      display: none;
+    }
+
+  }
+
+  &__price {
+    display: none;
+  }
+
+  &__buttons {
+    display: none;
+  }
+
+  &__button {
+    &-favorites {
+      display: inline-block;
+      @include typography($fz_16, $fw_500);
+      color: $main_green;
+    }
+
+    &-mobile {
+      display: none;
+    }
+  }
+
+  &__route {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1220px) {
+  .program {
+
+    &__content {
+      display: grid;
+      grid-template-rows: 1px 24px auto 33px 64px 43px 210px;
+
+    }
+
+    &__text {
       display: none;
     }
   }
 }
 
-@media only screen and (max-width: 1300px) {
-  .program {
-    margin-top: 0;
-
-    &__middle {
-      padding: 21px 0;
-    }
-
-    &__way {
-      &-mobile {
-        display: none;
-      }
-    }
-
-    &__panel {
-      &-text {
-        display: none;
-      }
-    }
-
-    &__conditions {
-
-      &-route {
-        display: none;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 1034px) {
-  .program {
-
-    &__way {
-      height: 192px;
-    }
-  }
-}
-
-
 @media only screen and (max-width: 834px) {
   .program {
+    position: relative;
+    margin-bottom: 40px;
 
-    &__top {
-      flex-direction: column;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 64px;
+      background-color: $gray_light;
+      border-bottom: 1px solid rgba($gray, 0.2);
+      z-index: -1;
     }
 
-    &__middle {
-      padding: 21px 0;
+    &__content {
+      display: grid;
+      column-gap: 10px;
+      grid-template-columns: 1fr minmax(288px, 343px);
+      grid-template-rows: 64px 20px 70px 37px 1px 24px auto 40px auto;
+      grid-template-areas:  "program_middle program_middle"
+                            ". ."
+                            "price price"
+                            ". ."
+                            "program_progress . "
+                            ". ."
+                            "program_infrormation program_infrormation"
+                            ". ."
+                            "program_bottom program_way"
+                            "program_bottom ."
+                            "program_bottom program_route";
+
+      &-middle {
+        padding: 22px 0;
+        border: 0;
+        background: none;
+
+      }
     }
 
-    &__bottom {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
+    &__menu {
+      grid-template-columns: 550px;
+      grid-template-areas: "program_navigation . .";
+    }
+
+    &__text {
+      display: none;
+    }
+
+    &__button {
+      display: none;
     }
 
     &__price {
+      grid-area: price;
       display: flex;
-      padding: 20px 0 40px 0;
       align-items: center;
       justify-content: space-between;
 
       &-date {
         @include typography($fz_16, $fw_400);
         line-height: 140%;
-      }
-
-      &-span {
-        color: $main_green;
       }
 
       &-line {
@@ -323,93 +315,76 @@
       }
     }
 
-    &__background {
-
-      &-mobile {
-        display: block;
-        background-color: $gray_light;
-        border-bottom: 1px solid rgba($gray, 0.2);
-      }
-
-      &-desktop {
-        display: none;
-      }
-    }
-
-    &__panel {
-      display: none;
+    &__conditions {
+      gap: 40px;
+      grid-template-columns: minmax(288px, 343px);
     }
 
     &__way {
-      height: auto;
-
-      &-desktop {
-        display: none;
-      }
-
-      &-mobile {
-        display: flex;
-      }
+      height: 200px;
     }
 
-    &__conditions {
-      flex-direction: column;
-      gap: 10px;
+    &__route {
+      display: block;
+      grid-area: program_route;
+    }
+  }
+}
 
-      &-item {
-        max-width: 343px;
-        width: 100%;
-      }
+@media only screen and (max-width: 700px) {
+  .program {
+    &__content {
+      grid-template-columns: minmax(auto, 343px) minmax(auto, 343px);
+    }
 
-      &-information {
-        max-width: 343px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-
-      &-route {
-        display: block;
-      }
+    &__way {
+      height: 230px;
+      grid-template-columns: auto;
     }
   }
 }
 
 @media only screen and (max-width: 576px) {
   .program {
+    margin-top: 10px;
 
-    &__top {
-      flex-direction: column;
+    &:before {
+      background: none;
+      border: none;
     }
 
-    &__middle {
-      padding: 21px 0;
-    }
+    &__content {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
 
-    &__bottom {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
+      &-middle {
+        display: none;
+      }
     }
 
     &__price {
       display: none;
     }
 
-    &__background {
-
-      &-mobile {
-        display: none;
-      }
-    }
-
     &__way {
       display: none;
     }
 
+    &__route {
+      display: none;
+    }
+
     &__information {
-      align-items: normal;
-      gap: 12px;
+      margin-top: 12px;
+      grid-template-columns: 1fr;
+
+      &-favorites {
+        display: none;
+      }
+
+      &-download {
+        display: none;
+      }
 
       &-text {
         @include typography($fz_12, $fw_400);
@@ -417,25 +392,11 @@
     }
 
     &__conditions {
-      flex-direction: column;
-      gap: 40px;
-
-      &-item {
-        max-width: 343px;
-        width: 100%;
-      }
-
-      &-information {
-        display: none;
-      }
-
-      &-route {
-        display: none;
-      }
+      grid-template-columns: auto;
     }
 
     &__buttons {
-      margin-top: 38px;
+      margin: 40px 0;
       display: flex;
       justify-content: space-between;
 
@@ -447,7 +408,7 @@
         gap: 4px;
         border: 1px solid $main_green;
         border-radius: 4px;
-        padding: 12px;
+        padding: 10px;
       }
 
       &-text {
@@ -455,23 +416,6 @@
         @include typography($fz_12, $fw_400);
       }
     }
-
-    &__button {
-      &-favorites {
-        display: none;
-      }
-
-      &-download {
-        display: none;
-      }
-
-      &-mobile {
-        display: block;
-      }
-    }
   }
 }
 
-.active__conditions-column {
-  background-color: $gray;
-}

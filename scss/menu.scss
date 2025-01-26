@@ -1,0 +1,212 @@
+@import "./settings/colors";
+@import "./settings/mixins";
+@import "./settings/fonts";
+
+
+.navigation {
+  grid-area: navigation;
+
+  display: flex;
+  justify-content: space-between;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    &-item {
+      @include typography($fz_16, $fw_500);
+      color: $white;
+    }
+  }
+
+  &__phone {
+    @include typography($fz_16, $fw_500);
+    color: $white;
+
+    &-button {
+      @include typography($fz_16, $fw_500);
+    }
+  }
+}
+
+.comments {
+  display: block;
+}
+
+.menu {
+  overflow: hidden;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+
+  &__show {
+    display: flex;
+  }
+
+  &__background {
+    width: 40%;
+    background-color: rgba($black, 0.9);
+    height: 100%;
+  }
+
+  &__aside {
+    position: relative;
+    padding: 30px 24px 0 24px;
+    background-color: $white;
+    width: 60%;
+  }
+
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &-item {
+      cursor: pointer;
+    }
+  }
+
+  &__text {
+    @include typography($fz_16, $fw_500);
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__phone {
+    color: $main_green;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    translate: -8px 8px;
+  }
+
+  &__selects {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__select {
+    border-radius: 4px;
+    border: 1px solid $black;
+    padding: 3px 12px;
+    position: relative;
+
+
+    &-currency {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-language {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-list {
+      margin-top: 6px;
+      left: 0;
+      position: absolute;
+      display: none;
+      flex-direction: column;
+      z-index: 1;
+    }
+
+    &-item {
+      max-width: 100%;
+      cursor: pointer;
+      padding-left: 15px;
+
+      &:hover {
+        max-width: 100%;
+        background-color: rgba($main_green, 0.2);
+      }
+    }
+
+    &-show {
+      display: flex;
+      width: 100%;
+    }
+
+    &-content {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    &-text {
+      @include typography($fz_12, $fw_400);
+      text-transform: uppercase;
+    }
+  }
+}
+
+.burger {
+  display: none;
+}
+
+@media only screen and (max-width: 980px) {
+  .navigation__phone {
+    display: none;
+
+    &-button {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 834px) {
+  .navigation {
+
+
+    &__list {
+      display: none;
+    }
+
+    &__phone {
+      display: block;
+
+      &-button {
+        display: block;
+      }
+    }
+  }
+
+
+  .burger {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .navigation {
+    display: none;
+  }
+}

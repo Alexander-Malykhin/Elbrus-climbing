@@ -5,7 +5,9 @@
 @import "./settings/mixins";
 @import "./settings/proccess";
 //SECTIONS
+@import "./additionalls";
 @import "./header";
+@import "./menu";
 @import "./program";
 @import "./route";
 @import "./gallery";
@@ -44,25 +46,58 @@
   @include typography($fz_24, $fw_600)
 }
 
-
-@media only screen and (max-width: 1300px) {
-  .container {
-    @include container(1034px);
+.accent {
+  &__main {
+    color: $main_green;
+  }
+  &__primary {
+    color: $gray;
+  }
+  &__select {
+    color: $white;
+    @include typography($fz_12, $fw_400);
   }
 }
 
-@media only screen and (max-width: 1034px) {
+.active {
+  &__column {
+    &-main {
+      background-color: $white;
+    }
+    &-primary {
+      background-color: $gray;
+    }
+  }
+  &__link {
+    color: $black;
+  }
+}
+
+@media only screen and (max-width: 1220px) {
   .container {
-    @include container(834px);
+    @include container(1140px);
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .container {
+    @include container(960px);
   }
 }
 
 @media only screen and (max-width: 834px) {
   .container {
-    @include container(764px);
+    @include container(754px);
   }
   .main {
     margin-top: 0;
+    gap: 0;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    @include container(586px);
   }
 }
 
@@ -72,9 +107,12 @@
     padding: 0 16px;
     margin: 0 auto;
   }
-
   .section {
     padding: 0;
+  }
+
+  .main  {
+    gap: 30px;
   }
 
   .section__title {

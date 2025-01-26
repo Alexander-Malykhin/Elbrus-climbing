@@ -21,149 +21,89 @@
     }
   }
 
-  &__phone {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-  }
-
-  &__block {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-  }
-
   &__content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 46px 77px 304px 23px 78px;
+    grid-template-areas:  "header_top"
+                          "."
+                          "header_middle"
+                          "."
+                          "header_bottom";
 
     &-top {
-      display: flex;
-      align-items: center;
+      grid-area: header_top;
+      display: grid;
+      grid-template-columns: max-content 1fr 560px 40px 244px;
+      grid-template-areas: "logo . navigation . panel";
       justify-content: space-between;
-      gap: 10px;
+      align-items: center;
     }
 
     &-middle {
-      margin-top: 77px;
-      display: flex;
-      align-items: flex-start;
+      grid-area: header_middle;
+      display: grid;
+      grid-template-columns: minmax(200px, 667px) 54px;
       justify-content: space-between;
-      gap: 10px;
+      align-items: start;
     }
 
     &-bottom {
-      margin-top: 23px;
-      display: flex;
+      grid-area: header_bottom;
+      display: grid;
+      grid-template-columns: minmax(520px, 575px) max-content max-content;
+      grid-template-areas: "description  text  button";
       justify-content: space-between;
-      align-items: flex-end;
+      align-items: end;
     }
   }
 
   &__logo {
+    grid-area: logo;
     max-width: 100%;
-    height: auto;
-  }
-
-  &__menu {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-  }
-
-  &__slider {
-    display: none;
-  }
-
-  &__navigation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-
-    &-item {
-      @include typography($fz_16, $fw_500);
-      color: $white;
-    }
-
-    &-button {
-      @include typography($fz_16, $fw_500);
-      color: $main_green;
-    }
   }
 
   &__panel {
+    grid-area: panel;
     display: flex;
     align-items: center;
     gap: 22px;
-
-    &-icon {
-      width: 22px;
-      height: 22px;
-    }
-
-    &-language {
-      @include typography($fz_12, $fw_400);
-      width: 22px;
-      height: 22px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      text-transform: uppercase;
-      border-radius: 4px;
-      border: 1px solid $white;
-      color: $white;
-    }
-
-    &-user {
-      width: 24px;
-      height: 24px;
-      border-radius: 100%;
-      border: 1px solid $white;
-      padding: 4px 4px 5px 4px;
-    }
   }
 
-  &__select {
+  &__slider {
+    grid-area: header_slider;
+    display: none;
+  }
+
+  &__language {
+    @include typography($fz_12, $fw_400);
+    width: 22px;
     height: 22px;
-    width: 68px;
-    padding: 3px 15px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
+    text-transform: uppercase;
     border-radius: 4px;
     border: 1px solid $white;
-
-    &-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 4px;
-    }
-
-    &-arrow {
-      cursor: pointer;
-    }
-
-    &-text {
-      @include typography($fz_12, $fw_400);
-      text-transform: uppercase;
-      color: $white;
-    }
+    color: $white;
   }
 
-  &__information {
-    max-width: 667px;
-    width: 100%;
-    height: 100%;
+  &__user {
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    border: 1px solid $white;
+    padding: 4px 4px 5px 4px;
+  }
+
+  &__banner {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: flex-start;
-    gap: 16px;
+    height: 100%;
 
     &-list {
       display: flex;
@@ -183,11 +123,9 @@
       @include typography($fz_45, $fw_700);
       text-transform: uppercase;
       color: $white;
-      line-height: 120%;
     }
 
     &-button {
-      margin-top: 5px;
       padding: 27px 27px 26px 31px;
       border-radius: 100%;
       border: 1px solid $white;
@@ -196,8 +134,6 @@
   }
 
   &__links {
-    max-width: 54px;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -222,15 +158,16 @@
   }
 
   &__description {
-
-    &-desktop {
-      display: flex;
-      gap: 48px;
-
-    }
+    grid-area: description;
 
     &-mobile {
       display: none;
+    }
+
+    &-desktop {
+      display: grid;
+      grid-template-columns: repeat(4, max-content);
+      justify-content: space-between;
     }
 
     &-item {
@@ -248,38 +185,22 @@
     }
 
     &-level {
-      padding: 12px 0 10px 0;
-      display: flex;
-      align-items: flex-end;
-      gap: 3px;
+      @include level__list(12px, 0, 10px, 0, 3px);
     }
 
     &-column {
-      height: 28px;
-      width: 11px;
-      border: 1px solid $white;
-      border-radius: 1.5px;
-
-      &:first-child {
-        height: 11px;
-      }
-
-      &:nth-child(2) {
-        height: 20px;
-      }
+      @include level__column(28px, 11px, $white, 1px, 1.5px, 11px, 20px);
     }
   }
 
-  &__describe {
+  &__text {
+    grid-area: text;
     @include typography($fz_16, $fw_600);
     color: $white;
-
-    &-color {
-      color: $main_green;
-    }
   }
 
   &__button {
+    grid-area: button;
     @include typography($fz_16, $fw_500);
     @include button__main(10.5px, 29.5px, $main_green, $white, 4px);
 
@@ -289,220 +210,75 @@
   }
 }
 
-.bell {
-  position: relative;
-  display: inline-block;
-
-  &__sum {
-    position: absolute;
-    bottom: -5px;
-    right: -10px;
-    background-color: $red;
-    @include typography($fz_10, $fw_900);
-    color: $white;
-    padding: 2px 6px;
-    border-radius: 10px;
-    width: 15px;
-    height: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-.burger {
-  display: none;
-}
-
-.menu {
-  overflow: hidden;
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  height: 100%;
-  width: 100%;
-
-  &__show {
-    display: flex;
-  }
-
-  &__background {
-    width: 40%;
-    background-color: rgba($black, 0.9);
-    height: 100%;
-  }
-
-  &__aside {
-    position: relative;
-    padding: 40px 24px 0 24px;
-    background-color: $white;
-    width: 60%;
-  }
-
-
-  &__column {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 40px;
-  }
-
-  &__list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-
-    &-item {
-      cursor: pointer;
-    }
-  }
-
-  &__text {
-    @include typography($fz_16, $fw_500);
-  }
-
-  &__links {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-
-    &-list {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-  }
-
-  &__phone {
-    color: $main_green;
-  }
-
-  &__close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    translate: -8px 8px;
-  }
-
-  &__selects {
-    display: flex;
-    gap: 16px;
-  }
-
-  &__select {
-    border-radius: 4px;
-    border: 1px solid $black;
-    padding: 3px 12px;
-    position: relative;
-
-
-    &-currency {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    &-language {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    &-list {
-      margin-top: 6px;
-      left: 0;
-      position: absolute;
-      display: none;
-      flex-direction: column;
-      z-index: 1;
-    }
-
-    &-item {
-      max-width: 100%;
-      cursor: pointer;
-      padding-left: 15px;
-      &:hover {
-        max-width: 100%;
-        background-color: rgba($main_green, 0.2);
-      }
-    }
-
-    &-show {
-      display: flex;
-      width: 100%;
-    }
-
-    &-content {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    &-text {
-      @include typography($fz_12, $fw_400);
-      text-transform: uppercase;
-    }
-  }
-}
-
-.active__description-column {
-  background-color: $white;
-}
-
-@media only screen and (max-width: 1300px) {
-  .header {
-    &__describe {
-      display: none;
-    }
-  }
-}
-
-@media only screen and (max-width: 1034px) {
-  .header__phone {
+@media only screen and (max-width: 1220px) {
+  .header__text {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .header__content-top {
+    grid-template-columns: max-content 1fr max-content 40px 244px;
   }
 }
 
 @media only screen and (max-width: 834px) {
   .header {
+    padding: 30px 0 24px 0;
 
     &__content {
+      grid-template-rows: 46px 77px 304px 55px max-content;
 
+      &-top {
+        grid-template-columns: max-content 1fr 313px 48px max-content;
+      }
       &-bottom {
-        margin-top: 50px;
+        grid-template-columns: minmax(300px, 370px)  max-content;
       }
     }
 
-    &__navigation {
+    &__language {
       display: none;
     }
 
-    &__block {
+    &__user {
       display: none;
     }
 
-    &__panel {
-      gap: 24px;
-    }
 
     &__information {
-      max-width: 530px;
-
       &-title {
         @include typography($fz_35, $fw_700);
-      }
-
-      &-button {
-        margin-top: 30px;
       }
     }
 
     &__description {
 
+      &-title {
+        @include typography($fz_18, $fw_700);
+      }
+
+      &-text {
+        @include typography($fz_12, $fw_400);
+      }
+
       &-desktop {
         display: none;
+      }
+
+      &-mobile {
+        display: block;
+      }
+
+      &-list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,max-content);
+        justify-content: space-between;
+      }
+
+      &-item {
+        text-align: center;
       }
 
       &-order {
@@ -512,42 +288,28 @@
       &-bottom {
         display: none;
       }
-
-      &-mobile {
-        display: flex;
-        gap: 65px;
-      }
-
-      &-list {
-        display: flex;
-        gap: 64px;
-      }
-
-      &-item {
-        text-align: center;
-      }
-
-      &-title {
-        @include typography($fz_18, $fw_700);
-      }
-
-      &-text {
-        @include typography($fz_12, $fw_400);
-      }
-    }
-
-    &__describe {
-      display: none;
     }
 
     &__button {
       @include button__main(7.5px, 25px, $main_green, $white, 4px);
     }
   }
+}
 
-  .burger {
-    cursor: pointer;
-    display: block;
+@media only screen and (max-width: 700px) {
+  .header {
+
+    &__content {
+      &-top {
+        grid-template-columns: max-content 1fr 300px 1fr max-content;
+      }
+    }
+
+    &__banner {
+      &-title {
+        @include typography($fz_35, $fw_700);
+      }
+    }
   }
 }
 
@@ -562,13 +324,22 @@
 
     &__logo {
       width: 57px;
-      height: 26px;
     }
 
     &__content {
+      grid-template-rows: 50px 8px 65px 8px 192px 16px;
+      grid-template-areas:  "header_top"
+                            "."
+                            "header_middle"
+                            "."
+                            "header_slider"
+                            "."
+                            "header_bottom";
 
       &-top {
         padding: 12px 0;
+        grid-template-areas: "logo . panel";
+        grid-template-columns: max-content 1fr max-content;
 
         &::before {
           content: "";
@@ -583,11 +354,11 @@
       }
 
       &-middle {
-        margin: 8px 0;
+        grid-template-columns: 1fr;
       }
 
       &-bottom {
-        margin-top: 0;
+        grid-template-columns: 1fr;
       }
     }
 
@@ -595,28 +366,21 @@
       display: none;
     }
 
-    &__navigation {
+    &-desktop {
       display: none;
     }
 
-    &__block {
-      display: none;
-    }
-
-    &__panel {
-      gap: 24px;
-    }
-
-    &__information {
+    &__banner {
       width: 100%;
 
-      &-list {
-        display: none;
-      }
 
       &-title {
         @include typography($fz_18, $fw_700);
         color: $black;
+      }
+
+      &-list {
+        display: none;
       }
 
       &-button {
@@ -628,78 +392,10 @@
       display: none;
     }
 
-    &__description {
-
-      &-bottom {
-        border-top: 1px solid rgba($black, 0.2);
-        padding: 8px 0;
-        display: flex;
-        justify-content: space-between;
-      }
-
-      &-chat {
-        border-radius: 100%;
-        border: 1px solid $main_green;
-        padding: 14px 12px 10px 12px;
-      }
-
-      &-button {
-        @include typography($fz_16, $fw_500);
-        @include button__main(10.5px, 48.5px, $main_green, $white, 4px);
-
-        &:hover {
-          @include hover__main($hover_green)
-        }
-      }
-
-      &-desktop {
-        display: none;
-      }
-
-      &-mobile {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        margin-bottom: 10px;
-      }
-
-      &-span {
-        color: $main_green;
-      }
-
-      &-order {
-        @include typography($fz_13, $fw_400);
-      }
-
-      &-list {
-        justify-content: space-between;
-        margin-top: 20px;
-        display: flex;
-        gap: 36px;
-        max-width: 100%;
-      }
-
-      &-item {
-        text-align: center;
-      }
-
-      &-title {
-        color: $gray;
-        @include typography($fz_18, $fw_700);
-      }
-
-      &-text {
-        color: $gray;
-        @include typography($fz_12, $fw_400);
-      }
-    }
-
     &__slider {
       overflow-x: auto;
       display: grid;
       grid-template-columns: repeat(5, 288px);
-      grid-template-rows: 192px;
       gap: 8px;
 
       &::-webkit-scrollbar {
@@ -738,8 +434,62 @@
       }
     }
 
-    &__describe {
-      display: none;
+    &__description {
+
+      &-bottom {
+        border-top: 1px solid rgba($black, 0.2);
+        padding: 8px 0;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-chat {
+        border-radius: 100%;
+        border: 1px solid $main_green;
+        padding: 14px 12px 10px 12px;
+      }
+
+      &-button {
+        @include typography($fz_16, $fw_500);
+        @include button__main(10.5px, 48.5px, $main_green, $white, 4px);
+
+        &:hover {
+          @include hover__main($hover_green)
+        }
+      }
+
+      &-mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      &-order {
+        display: block;
+        @include typography($fz_13, $fw_400);
+      }
+
+      &-list {
+        justify-content: space-between;
+        display: flex;
+        gap: 36px;
+        max-width: 370px;
+      }
+
+      &-item {
+        text-align: center;
+      }
+
+      &-title {
+        color: $gray;
+        @include typography($fz_18, $fw_700);
+      }
+
+      &-text {
+        color: $gray;
+        @include typography($fz_12, $fw_400);
+      }
     }
 
     &__button {

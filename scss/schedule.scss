@@ -112,11 +112,17 @@
 
       &-header {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         justify-content: space-between;
+        gap: 12px;
+      }
+
+      &-container {
+        width: 100%;
       }
 
       &-title {
+        text-align: left;
         max-width: 195px;
         @include typography($fz_16, $fw_600);
       }
@@ -137,4 +143,5 @@
     }
   }
 }
+
 

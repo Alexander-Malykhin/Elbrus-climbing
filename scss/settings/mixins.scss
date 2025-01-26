@@ -34,6 +34,28 @@
   transition: 0.3s ease-in-out;
 }
 
+@mixin level__list($top,$right,$bottom,$left,$gap) {
+  padding: $top $right $bottom $left;
+  display: flex;
+  align-items: flex-end;
+  gap: $gap;
+}
+
+@mixin  level__column($height,$width,$color,$border,$radius,$first,$last) {
+  height: $height;
+  width: $width;
+  border: $border solid $color;
+  border-radius: $radius;
+
+  &:first-child {
+    height: $first;
+  }
+
+  &:nth-child(2) {
+    height: $last;
+  }
+}
+
 @mixin progress_line($color, $step) {
   &:after {
     content: '';
